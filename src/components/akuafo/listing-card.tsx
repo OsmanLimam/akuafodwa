@@ -73,7 +73,7 @@ export function ListingCard({
         ) : (
           <div className="flex h-full items-center justify-center text-muted-foreground">No photo</div>
         )}
-        <span className="absolute left-2.5 top-2.5 rounded-full bg-[#1B5E20]/85 px-2.5 py-1 text-[11px] font-medium text-[#FFFDF5] backdrop-blur-sm">
+        <span className="absolute left-2.5 top-2.5 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-[#1B5E20] shadow-sm ring-1 ring-inset ring-[#1B5E20]/10 backdrop-blur-sm">
           {listing.category.name}
         </span>
         <button
