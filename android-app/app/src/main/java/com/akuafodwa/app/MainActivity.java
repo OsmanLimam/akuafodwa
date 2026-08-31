@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.webkit.ValueCallback;
@@ -40,6 +42,15 @@ public class MainActivity extends Activity {
     private LinearLayout errorView;
     private ValueCallback<Uri[]> fileUploadCallback;
     private boolean mainFrameFailed = false;
+    private View splashView;
+    private boolean splashShown = true;
+    private final Handler splashHandler = new Handler(Looper.getMainLooper());
+    private final Runnable splashTimeoutRunnable = new Runnable() {
+        @Override
+        public void run() {
+            hideSplash();
+        }
+    };
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -52,6 +63,7 @@ public class MainActivity extends Activity {
         progressBar = findViewById(R.id.progress_bar);
         errorView = findViewById(R.id.error_view);
         Button retryButton = findViewById(R.id.retry_button);
+        splashView = findViewById(R.id.splash_view);
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
@@ -90,6 +102,7 @@ public class MainActivity extends Activity {
             public void onPageFinished(WebView view, String url) {
                 swipeRefresh.setRefreshing(false);
                 progressBar.setVisibility(View.GONE);
+                hideSplash();
                 super.onPageFinished(view, url);
             }
 
@@ -100,6 +113,7 @@ public class MainActivity extends Activity {
                     progressBar.setVisibility(View.GONE);
                     swipeRefresh.setRefreshing(false);
                     errorView.setVisibility(View.VISIBLE);
+                    hideSplash();
                 }
                 super.onReceivedError(view, request, error);
             }
@@ -151,15 +165,38 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 errorView.setVisibility(View.GONE);
                 mainFrameFailed = false;
+                hideSplash();
                 webView.loadUrl(getString(R.string.app_url));
             }
         });
 
         if (savedInstanceState != null) {
+            // Coming back from rotation/process death — no splash needed.
+            splashShown = false;
+            splashView.setVisibility(View.GONE);
             webView.restoreState(savedInstanceState);
         } else {
+            // Safety net: never hold the splash for more than 8 seconds.
+            splashHandler.postDelayed(splashTimeoutRunnable, 8000);
             webView.loadUrl(getString(R.string.app_url));
         }
+    }
+
+    /** Fades the branded splash out once the market is on screen. */
+    private void hideSplash() {
+        if (!splashShown) return;
+        splashShown = false;
+        splashHandler.removeCallbacks(splashTimeoutRunnable);
+        splashView.animate()
+                .alpha(0f)
+                .setDuration(350)
+                .withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        splashView.setVisibility(View.GONE);
+                    }
+                })
+                .start();
     }
 
     private boolean openExternally(Uri uri) {

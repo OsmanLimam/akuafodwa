@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AkuafoDwa</string>
+    <string name="tagline">Ghana\'s farmers market online</string>
 
     <!-- ============================================================
          The one place to point the app at your market.
