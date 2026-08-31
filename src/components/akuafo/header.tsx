@@ -294,6 +294,11 @@ export function Header() {
                       <Button onClick={() => { setMobileOpen(false); openAuth('register') }} variant="outline" className="bg-transparent border-[#FBC02D]/60 text-[#FFFDF5] hover:bg-white/10 hover:text-white rounded-full font-semibold">
                         {t('create_account')}
                       </Button>
+                      {/* First-time visitors are exactly who should install the app. */}
+                      <InstallAppButton
+                        className="w-full justify-start bg-transparent border-[#FBC02D]/60 text-[#FFFDF5] hover:bg-white/10 hover:text-white rounded-xl font-semibold"
+                        label={t('install_app')}
+                      />
                       <p className="text-xs text-[#E8F5E9]/60 px-1 pt-2">
                         Buy, sell and negotiate farm produce. Free to join.
                       </p>

@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    // Stable identity for installers/store packaging (PWABuilder, Play Store).
+    id: '/',
     name: "AkuafoDwa: Ghana's Farmers Market Online",
     short_name: 'AkuafoDwa',
     description:
@@ -31,6 +33,22 @@ export default function manifest(): MetadataRoute.Manifest {
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',
+      },
+    ],
+    screenshots: [
+      {
+        src: '/screenshots/app-mobile.jpg',
+        sizes: '589x1278',
+        type: 'image/jpeg',
+        form_factor: 'narrow',
+        label: "Fresh on the market — produce from all 16 regions of Ghana",
+      },
+      {
+        src: '/screenshots/app-desktop.jpg',
+        sizes: '1152x720',
+        type: 'image/jpeg',
+        form_factor: 'wide',
+        label: 'AkuafoDwa market on desktop',
       },
     ],
   }
