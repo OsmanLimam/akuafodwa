@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_dark">#1B5E20</color>
+    <color name="background">#FFFDF5</color>
+    <color name="text_dark">#1C1B16</color>
+    <color name="text_muted">#6B6A63</color>
+</resources>

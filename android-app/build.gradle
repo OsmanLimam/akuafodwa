@@ -1,0 +1,5 @@
+// Top-level build file. AGP 8.7.3 needs Android Studio Ladybug (2024.2.1) or newer and JDK 17
+// (Android Studio ships with JDK 17 built in — no extra install needed).
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
+}

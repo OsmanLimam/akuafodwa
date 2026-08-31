@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AkuafoDwa</string>
+
+    <!-- ============================================================
+         The one place to point the app at your market.
+         If your Vercel URL is different, change BOTH values below.
+         ============================================================ -->
+    <string name="app_url">https://akuafodwa.vercel.app</string>
+    <string name="app_host">akuafodwa.vercel.app</string>
+
+    <string name="error_title">No internet connection</string>
+    <string name="error_message">AkuafoDwa needs mobile data or Wi-Fi to load the market. Check your connection and try again.</string>
+    <string name="retry">Try again</string>
+</resources>
