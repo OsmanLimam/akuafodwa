@@ -1,10 +1,33 @@
-// AUTO-GENERATED from prisma/schema.prisma (bunx prisma migrate diff --from-empty).
-// Idempotent DDL: lets a fresh host (e.g. Vercel ephemeral disk) build the full
-// schema on first use. Local/dev databases already have these tables and no-op.
-export const SCHEMA_SQL = `
--- CreateTable
-CREATE TABLE IF NOT EXISTS "User" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+// AUTO-GENERATED from prisma/schema.prisma — do not edit by hand.
+// Regenerate with: bun scripts/gen-schema-sql.ts
+//
+// Idempotent Postgres DDL. Lets a fresh host (e.g. a brand-new Neon database
+// on Vercel) build the full schema on first use; running it again is a no-op.
+// - Tables/indexes use IF NOT EXISTS.
+// - Foreign keys are wrapped in DO blocks that check pg_constraint, because
+//   Postgres has no ADD CONSTRAINT IF NOT EXISTS.
+// Statements are pre-split (dollar-quote aware); src/lib/bootstrap.ts runs
+// them one by one via $executeRawUnsafe.
+
+export const SCHEMA_TABLES: string[] = [
+  'User',
+  'Session',
+  'Category',
+  'Listing',
+  'ListingImage',
+  'OfferThread',
+  'OfferMessage',
+  'Review',
+  'Favorite',
+  'AuditLog',
+  'PushSubscription',
+]
+
+export const SCHEMA_STATEMENTS: string[] = [
+  `CREATE SCHEMA IF NOT EXISTS "public";`,
+
+  `CREATE TABLE IF NOT EXISTS "User" (
+    "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "phone" TEXT,
@@ -17,39 +40,41 @@ CREATE TABLE IF NOT EXISTS "User" (
     "identityStatus" TEXT NOT NULL DEFAULT 'UNVERIFIED',
     "idDocumentType" TEXT,
     "idDocumentPath" TEXT,
-    "verifiedAt" DATETIME,
+    "verifiedAt" TIMESTAMP(3),
     "verificationNote" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "Session" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "Session" (
+    "id" TEXT NOT NULL,
     "token" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
-    "expiresAt" DATETIME NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
+    "expiresAt" TIMESTAMP(3) NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "Category" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "Session_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "Category" (
+    "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "icon" TEXT,
-    "isDefault" BOOLEAN NOT NULL DEFAULT false
-);
+    "isDefault" BOOLEAN NOT NULL DEFAULT false,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "Listing" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "Category_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "Listing" (
+    "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "description" TEXT NOT NULL,
-    "price" REAL NOT NULL,
+    "price" DOUBLE PRECISION NOT NULL,
     "unit" TEXT NOT NULL,
-    "quantity" REAL NOT NULL,
+    "quantity" DOUBLE PRECISION NOT NULL,
     "priceNegotiable" BOOLEAN NOT NULL DEFAULT true,
     "region" TEXT NOT NULL,
     "city" TEXT,
@@ -57,121 +82,212 @@ CREATE TABLE IF NOT EXISTS "Listing" (
     "packaging" TEXT,
     "harvestInfo" TEXT,
     "productionMethod" TEXT,
-    "minOrder" REAL,
+    "minOrder" DOUBLE PRECISION,
     "fulfillment" TEXT NOT NULL DEFAULT 'PICKUP',
     "status" TEXT NOT NULL DEFAULT 'ACTIVE',
     "isPremium" BOOLEAN NOT NULL DEFAULT false,
     "views" INTEGER NOT NULL DEFAULT 0,
     "sellerId" TEXT NOT NULL,
     "categoryId" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "Listing_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "Listing_categoryId_fkey" FOREIGN KEY ("categoryId") REFERENCES "Category" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "ListingImage" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "Listing_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "ListingImage" (
+    "id" TEXT NOT NULL,
     "listingId" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "sortOrder" INTEGER NOT NULL DEFAULT 0,
-    CONSTRAINT "ListingImage_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "OfferThread" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "ListingImage_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "OfferThread" (
+    "id" TEXT NOT NULL,
     "listingId" TEXT NOT NULL,
     "buyerId" TEXT NOT NULL,
     "sellerId" TEXT NOT NULL,
     "status" TEXT NOT NULL DEFAULT 'OPEN',
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "OfferThread_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "OfferThread_buyerId_fkey" FOREIGN KEY ("buyerId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "OfferThread_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "OfferMessage" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "OfferThread_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "OfferMessage" (
+    "id" TEXT NOT NULL,
     "threadId" TEXT NOT NULL,
     "senderId" TEXT,
     "kind" TEXT NOT NULL DEFAULT 'MESSAGE',
-    "quantity" REAL,
-    "price" REAL,
+    "quantity" DOUBLE PRECISION,
+    "price" DOUBLE PRECISION,
     "body" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "OfferMessage_threadId_fkey" FOREIGN KEY ("threadId") REFERENCES "OfferThread" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "OfferMessage_senderId_fkey" FOREIGN KEY ("senderId") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "Review" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "OfferMessage_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "Review" (
+    "id" TEXT NOT NULL,
     "threadId" TEXT NOT NULL,
     "sellerId" TEXT NOT NULL,
     "buyerId" TEXT NOT NULL,
     "rating" INTEGER NOT NULL,
     "comment" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "Review_threadId_fkey" FOREIGN KEY ("threadId") REFERENCES "OfferThread" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "Review_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "Review_buyerId_fkey" FOREIGN KEY ("buyerId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "Favorite" (
+    CONSTRAINT "Review_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "Favorite" (
     "userId" TEXT NOT NULL,
     "listingId" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    PRIMARY KEY ("userId", "listingId"),
-    CONSTRAINT "Favorite_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "Favorite_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
+    CONSTRAINT "Favorite_pkey" PRIMARY KEY ("userId","listingId")
+);`,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "AuditLog" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+  `CREATE TABLE IF NOT EXISTS "AuditLog" (
+    "id" TEXT NOT NULL,
     "actorId" TEXT,
     "action" TEXT NOT NULL,
     "targetType" TEXT,
     "targetId" TEXT,
     "detail" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
--- CreateTable
-CREATE TABLE IF NOT EXISTS "PushSubscription" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    CONSTRAINT "AuditLog_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "PushSubscription" (
+    "id" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
     "endpoint" TEXT NOT NULL,
     "p256dh" TEXT NOT NULL,
     "auth" TEXT NOT NULL,
     "userAgent" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "lastUsedAt" DATETIME,
-    CONSTRAINT "PushSubscription_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
-);
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "lastUsedAt" TIMESTAMP(3),
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "User_email_key" ON "User"("email");
+    CONSTRAINT "PushSubscription_pkey" PRIMARY KEY ("id")
+);`,
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "Session_token_key" ON "Session"("token");
+  `CREATE UNIQUE INDEX IF NOT EXISTS "User_email_key" ON "User"("email");`,
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "Category_name_key" ON "Category"("name");
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Session_token_key" ON "Session"("token");`,
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "Category_slug_key" ON "Category"("slug");
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Category_name_key" ON "Category"("name");`,
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "Review_threadId_key" ON "Review"("threadId");
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Category_slug_key" ON "Category"("slug");`,
 
--- CreateIndex
-CREATE UNIQUE INDEX IF NOT EXISTS "PushSubscription_endpoint_key" ON "PushSubscription"("endpoint");
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Review_threadId_key" ON "Review"("threadId");`,
 
-`;
+  `CREATE UNIQUE INDEX IF NOT EXISTS "PushSubscription_endpoint_key" ON "PushSubscription"("endpoint");`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Session_userId_fkey") THEN
+        ALTER TABLE "Session" ADD CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Listing_sellerId_fkey") THEN
+        ALTER TABLE "Listing" ADD CONSTRAINT "Listing_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Listing_categoryId_fkey") THEN
+        ALTER TABLE "Listing" ADD CONSTRAINT "Listing_categoryId_fkey" FOREIGN KEY ("categoryId") REFERENCES "Category"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "ListingImage_listingId_fkey") THEN
+        ALTER TABLE "ListingImage" ADD CONSTRAINT "ListingImage_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "OfferThread_listingId_fkey") THEN
+        ALTER TABLE "OfferThread" ADD CONSTRAINT "OfferThread_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "OfferThread_buyerId_fkey") THEN
+        ALTER TABLE "OfferThread" ADD CONSTRAINT "OfferThread_buyerId_fkey" FOREIGN KEY ("buyerId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "OfferThread_sellerId_fkey") THEN
+        ALTER TABLE "OfferThread" ADD CONSTRAINT "OfferThread_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "OfferMessage_threadId_fkey") THEN
+        ALTER TABLE "OfferMessage" ADD CONSTRAINT "OfferMessage_threadId_fkey" FOREIGN KEY ("threadId") REFERENCES "OfferThread"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "OfferMessage_senderId_fkey") THEN
+        ALTER TABLE "OfferMessage" ADD CONSTRAINT "OfferMessage_senderId_fkey" FOREIGN KEY ("senderId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Review_threadId_fkey") THEN
+        ALTER TABLE "Review" ADD CONSTRAINT "Review_threadId_fkey" FOREIGN KEY ("threadId") REFERENCES "OfferThread"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Review_sellerId_fkey") THEN
+        ALTER TABLE "Review" ADD CONSTRAINT "Review_sellerId_fkey" FOREIGN KEY ("sellerId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Review_buyerId_fkey") THEN
+        ALTER TABLE "Review" ADD CONSTRAINT "Review_buyerId_fkey" FOREIGN KEY ("buyerId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Favorite_userId_fkey") THEN
+        ALTER TABLE "Favorite" ADD CONSTRAINT "Favorite_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Favorite_listingId_fkey") THEN
+        ALTER TABLE "Favorite" ADD CONSTRAINT "Favorite_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "PushSubscription_userId_fkey") THEN
+        ALTER TABLE "PushSubscription" ADD CONSTRAINT "PushSubscription_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+]

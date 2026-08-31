@@ -7,7 +7,7 @@
  * favorites, demo offer threads. Images live in /public/uploads/seed and are
  * referenced by stable local paths.
  */
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient, Prisma } from '@prisma/client'
 import { scryptSync, randomBytes } from 'crypto'
 
 function hashPassword(password: string): string {
@@ -339,7 +339,7 @@ const LISTINGS: SeedListing[] = [
   },
 ]
 
-export async function runSeed(db: PrismaClient) {
+export async function runSeed(db: PrismaClient | Prisma.TransactionClient) {
   console.log('Seeding AkuafoDwa...')
 
   await db.auditLog.deleteMany()

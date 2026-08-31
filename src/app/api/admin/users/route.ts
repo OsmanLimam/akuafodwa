@@ -10,7 +10,14 @@ export async function GET(req: NextRequest) {
   try {
     const q = req.nextUrl.searchParams.get('q')?.trim() ?? ''
     const users = await db.user.findMany({
-      where: q ? { OR: [{ name: { contains: q } }, { email: { contains: q } }] } : {},
+      where: q
+        ? {
+            OR: [
+              { name: { contains: q, mode: 'insensitive' } },
+              { email: { contains: q, mode: 'insensitive' } },
+            ],
+          }
+        : {},
       orderBy: { createdAt: 'desc' },
       include: { _count: { select: { listings: true } } },
     })

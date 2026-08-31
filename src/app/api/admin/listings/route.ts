@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
     const status = sp.get('status') ?? 'ALL'
     const where: Record<string, unknown> = {}
     if (status !== 'ALL') where.status = status
-    if (q) where.title = { contains: q }
+    if (q) where.title = { contains: q, mode: 'insensitive' }
     const listings = await db.listing.findMany({
       where,
       orderBy: { createdAt: 'desc' },

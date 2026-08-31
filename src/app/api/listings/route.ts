@@ -75,19 +75,13 @@ export async function GET(req: NextRequest) {
       }
     }
     if (q) {
-      // SQLite string comparison is case-sensitive for non-ASCII but LIKE-based
-      // contains matches ASCII case-insensitively; to be safe we match both cases.
+      // Postgres contains is case-sensitive; mode: 'insensitive' makes the
+      // search behave the same way it did on SQLite (ASCII case-insensitive).
       where.OR = [
-        { title: { contains: q } },
-        { title: { contains: q.toLowerCase() } },
-        { title: { contains: q.toUpperCase() } },
-        { title: { contains: q.charAt(0).toUpperCase() + q.slice(1) } },
-        { description: { contains: q } },
-        { description: { contains: q.toLowerCase() } },
-        { city: { contains: q } },
-        { city: { contains: q.toLowerCase() } },
-        { region: { contains: q } },
-        { region: { contains: q.toLowerCase() } },
+        { title: { contains: q, mode: 'insensitive' } },
+        { description: { contains: q, mode: 'insensitive' } },
+        { city: { contains: q, mode: 'insensitive' } },
+        { region: { contains: q, mode: 'insensitive' } },
       ]
     }
 
