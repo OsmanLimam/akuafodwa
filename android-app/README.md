@@ -46,6 +46,17 @@ The site is already a store-grade PWA, so pwabuilder.com can package it for you:
    `TWA_PACKAGE_NAME=com.akuafodwa.app` and `TWA_SHA256_FINGERPRINTS=<SHA-256 from the zip's
    assetlinks/readme>` — the `/.well-known/assetlinks.json` endpoint picks them up automatically.
 
+## Updating the APK later
+
+- **Inside the market** (listings, photos, prices, page design, admin tools): reaches
+  everyone **automatically** — the app loads your live website. Nothing to do.
+- **The app shell** (splash screen, app icon, offline screen): baked into the APK at
+  build time. To change it, build a new APK and share it again:
+  1. Bump `versionCode` + `versionName` in `app/build.gradle`.
+  2. Build → Build APK(s) → share the new file.
+  3. Phones with an **older build should uninstall it first**, then install the new one —
+     Android blocks an "update" between APKs signed with different keys (error: "App not installed").
+
 ## Notes
 
 - The APK needs internet — it's your live market, not an offline copy.
