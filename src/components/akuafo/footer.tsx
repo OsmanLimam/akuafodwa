@@ -57,7 +57,13 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#FFFDF5]/45">
-          <p>© {new Date().getFullYear()} AkuafoDwa. Proudly made for Ghana&apos;s farmers.</p>
+          <p>
+            © {new Date().getFullYear()} AkuafoDwa. Proudly made for Ghana&apos;s farmers.
+            <span aria-hidden="true" className="mx-2">·</span>
+            <a href="/privacy" className="underline-offset-2 transition-colors hover:text-[#FBC02D] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FBC02D]">
+              Privacy
+            </a>
+          </p>
           <p className="font-display italic">“The market belongs to those who wake early.”</p>
         </div>
       </div>

@@ -4,6 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     // Stable identity for installers/store packaging (PWABuilder, Play Store).
     id: '/',
+    lang: 'en',
+    dir: 'ltr',
     name: "AkuafoDwa: Ghana's Farmers Market Online",
     short_name: 'AkuafoDwa',
     description:
