@@ -2,17 +2,15 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { getSessionUser, audit } from '@/lib/auth'
 import { rateLimit } from '@/lib/rate-limit'
-import { mkdir, writeFile } from 'fs/promises'
-import path from 'path'
-import { randomBytes } from 'crypto'
 import { sniffImage, IMAGE_MIME_TO_EXT } from '@/lib/file-validation'
 
 const MAX_SIZE = 5 * 1024 * 1024 // 5MB
 const DOC_TYPES = ['GHANA_CARD', 'PASSPORT', 'DRIVERS_LICENSE', 'BUSINESS_REGISTRATION']
 
-// Identity documents are HIGHLY SENSITIVE. They are stored OUTSIDE /public so
-// they can never be reached by a direct URL. The only way to view one is the
-// admin-only document endpoint. The database stores the server-side path only.
+// Identity documents are HIGHLY SENSITIVE. They are stored in the database as
+// a private StoredFile and can never be reached by a direct URL — the only way
+// to view one is the admin-only document endpoint. The user row stores the
+// StoredFile id in idDocumentPath.
 export async function POST(req: NextRequest) {
   const user = await getSessionUser()
   if (!user) {
@@ -63,18 +61,24 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Your identity is already verified.' }, { status: 409 })
     }
 
-    // Private directory, outside /public.
-    const dir = path.join(process.cwd(), 'private-verification-docs')
-    await mkdir(dir, { recursive: true })
-    const name = `${Date.now()}-${randomBytes(8).toString('hex')}.${sniff.ext}`
-    await writeFile(path.join(dir, name), bytes)
+    // Stored privately in the database; never exposed by a public URL.
+    const created = await db.storedFile.create({
+      data: {
+        kind: 'ID_DOCUMENT',
+        mime: file.type,
+        size: bytes.length,
+        data: bytes,
+        ownerId: user.id,
+      },
+      select: { id: true },
+    })
 
     await db.user.update({
       where: { id: user.id },
       data: {
         identityStatus: 'PENDING',
         idDocumentType: docType,
-        idDocumentPath: name,
+        idDocumentPath: created.id,
         verificationNote: null,
       },
     })

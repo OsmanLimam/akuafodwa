@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { db } from '@/lib/db'
 import { getSessionUser } from '@/lib/auth'
 import { rateLimit } from '@/lib/rate-limit'
-import { mkdir, writeFile } from 'fs/promises'
-import path from 'path'
-import { randomBytes } from 'crypto'
 import { sniffImage, IMAGE_MIME_TO_EXT } from '@/lib/file-validation'
 
 const MAX_SIZE = 4 * 1024 * 1024 // 4MB
 
+// Listing photos are stored IN the database (StoredFile) and served back
+// through /api/files/[id]. No writable disk needed — works on Vercel.
 export async function POST(req: NextRequest) {
   const user = await getSessionUser()
   if (!user) {
@@ -26,8 +26,8 @@ export async function POST(req: NextRequest) {
     if (!(file instanceof File)) {
       return NextResponse.json({ error: 'No file uploaded.' }, { status: 400 })
     }
-    const mimeExt = IMAGE_MIME_TO_EXT[file.type]
-    if (!mimeExt) {
+    const mime = IMAGE_MIME_TO_EXT[file.type] ? file.type : null
+    if (!mime) {
       return NextResponse.json({ error: 'Only JPG, PNG or WEBP images are allowed.' }, { status: 400 })
     }
     if (file.size > MAX_SIZE) {
@@ -40,12 +40,18 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'That file is not a valid image.' }, { status: 400 })
     }
 
-    const dir = path.join(process.cwd(), 'public', 'uploads')
-    await mkdir(dir, { recursive: true })
-    const name = `${Date.now()}-${randomBytes(6).toString('hex')}.${sniff.ext}`
-    await writeFile(path.join(dir, name), bytes)
+    const created = await db.storedFile.create({
+      data: {
+        kind: 'LISTING_IMAGE',
+        mime,
+        size: bytes.length,
+        data: bytes,
+        ownerId: user.id,
+      },
+      select: { id: true },
+    })
 
-    return NextResponse.json({ url: `/uploads/${name}` }, { status: 201 })
+    return NextResponse.json({ url: `/api/files/${created.id}` }, { status: 201 })
   } catch (e) {
     console.error('uploads POST error', e)
     return NextResponse.json({ error: 'Failed to upload image.' }, { status: 500 })

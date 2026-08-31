@@ -4,6 +4,7 @@ import { getSessionUser } from '@/lib/auth'
 import { slugify } from '@/lib/constants'
 import { rateLimit } from '@/lib/rate-limit'
 import { ensureDatabaseReady } from '@/lib/bootstrap'
+import { LISTING_IMAGE_URL } from '@/lib/file-validation'
 
 const SELLER_SELECT = {
   id: true,
@@ -26,7 +27,7 @@ function sanitizeImages(input: unknown): string[] {
   if (!Array.isArray(input)) return []
   return input
     .map((i) => String(i))
-    .filter((u) => /^\/uploads\/[A-Za-z0-9._-]+$/.test(u))
+    .filter((u) => LISTING_IMAGE_URL.test(u))
     .slice(0, 6)
 }
 

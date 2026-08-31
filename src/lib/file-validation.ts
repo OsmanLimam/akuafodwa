@@ -29,3 +29,8 @@ export const IMAGE_MIME_TO_EXT: Record<string, 'jpg' | 'png' | 'webp'> = {
   'image/png': 'png',
   'image/webp': 'webp',
 }
+
+// Listing image URLs must be locally-hosted only: legacy files under /uploads
+// (seed photos) or database-stored files under /api/files/<id>. External URLs
+// are never accepted.
+export const LISTING_IMAGE_URL = /^(\/uploads\/[A-Za-z0-9._-]+|\/api\/files\/[A-Za-z0-9]+)$/

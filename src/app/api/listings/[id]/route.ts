@@ -3,6 +3,7 @@ import { db } from '@/lib/db'
 import { getSessionUser, audit } from '@/lib/auth'
 import { rateLimit } from '@/lib/rate-limit'
 import { ensureDatabaseReady } from '@/lib/bootstrap'
+import { LISTING_IMAGE_URL } from '@/lib/file-validation'
 
 const SELLER_SELECT = {
   id: true,
@@ -216,7 +217,7 @@ export async function PATCH(req: NextRequest, ctx: { params: Promise<{ id: strin
     if (body.images !== undefined && Array.isArray(body.images)) {
       const images: string[] = body.images
         .map((i: unknown) => String(i))
-        .filter((u) => /^\/uploads\/[A-Za-z0-9._-]+$/.test(u))
+        .filter((u) => LISTING_IMAGE_URL.test(u))
         .slice(0, 6)
       if (images.length === 0) {
         return NextResponse.json({ error: 'At least one photo is required.' }, { status: 400 })

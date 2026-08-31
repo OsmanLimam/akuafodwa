@@ -20,7 +20,7 @@ model User {
   profileImage   String?
   identityStatus String   @default("UNVERIFIED") // UNVERIFIED | PENDING | VERIFIED | REJECTED
   idDocumentType String? // GHANA_CARD | PASSPORT | DRIVERS_LICENSE | BUSINESS_REGISTRATION
-  idDocumentPath String? // PRIVATE: server-side path, never exposed to clients, never served from /public
+  idDocumentPath String? // PRIVATE: StoredFile id, never exposed publicly; only streamed via the admin-only document endpoint
   verifiedAt     DateTime?
   verificationNote String? // note from review, shown to the account owner only
   createdAt      DateTime  @default(now())
@@ -165,4 +165,18 @@ model PushSubscription {
   userAgent  String?
   createdAt  DateTime  @default(now())
   lastUsedAt DateTime?
+}
+
+// Uploaded binary files (listing photos, identity documents) stored IN the
+// database so the app needs no writable disk (Vercel/serverless-friendly).
+// Listing photos are served publicly via /api/files/[id]; identity documents
+// are only streamed through the admin-only document endpoint.
+model StoredFile {
+  id        String   @id @default(cuid())
+  kind      String // LISTING_IMAGE | ID_DOCUMENT
+  mime      String
+  size      Int
+  data      Bytes
+  ownerId   String?
+  createdAt DateTime @default(now())
 }
