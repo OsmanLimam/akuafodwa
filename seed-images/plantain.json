@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "green plantain bunches at a market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f2372c3bdf01.jpg",
+      "caption": "",
+      "source": "Purvey'd",
+      "original_width": "1300px",
+      "original_height": "1300px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2bdda5b5fd67.jpg",
+      "caption": "",
+      "source": "NBC News",
+      "original_width": "1500px",
+      "original_height": "1125px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3391c5d63d2a.jpg",
+      "caption": "",
+      "source": "Fontagro",
+      "original_width": "1940px",
+      "original_height": "1035px"
+    }
+  ]
+}

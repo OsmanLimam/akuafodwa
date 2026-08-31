@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "ripe papaya pawpaw fruits at a market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8b4317ca60e0.png",
+      "caption": "",
+      "source": "Wikifarmer",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8a954b33924d.jpeg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "3024px",
+      "original_height": "4032px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c93645e41c64.jpeg",
+      "caption": "",
+      "source": "Tuko News",
+      "original_width": "1200px",
+      "original_height": "675px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "raw groundnuts peanuts in shells in a sack",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bd9ad8e06512.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1198px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3cbf96fe3ce3.jpeg",
+      "caption": "",
+      "source": "Walmart",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a3ee86879fb5.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "950px"
+    }
+  ]
+}

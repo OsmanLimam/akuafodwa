@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "true",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/65fd23e063a3.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b47edb703a46.jpg",
+      "caption": "",
+      "source": "Crunchbase",
+      "original_width": "1920px",
+      "original_height": "746px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5c28ec5d8517.jpg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "760px",
+      "original_height": "1140px"
+    }
+  ]
+}

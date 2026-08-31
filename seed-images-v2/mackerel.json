@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "smoked mackerel fish traditional smoking",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6bcf1efbbe01.jpg",
+      "caption": "",
+      "source": "Taste of Artisan",
+      "original_width": "1000px",
+      "original_height": "1288px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ae0eb86c7f1e.jpg",
+      "caption": "",
+      "source": "Great Italian Chefs",
+      "original_width": "1426px",
+      "original_height": "713px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/283b40174b16.jpg",
+      "caption": "",
+      "source": "Hamiltons Fish",
+      "original_width": "3024px",
+      "original_height": "3024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8836fb3c3a82.jpg",
+      "caption": "",
+      "source": "Kitchen Laughter",
+      "original_width": "1200px",
+      "original_height": "1800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/294027c266bd.jpg",
+      "caption": "",
+      "source": "- WILD GREENS & SARDINES",
+      "original_width": "850px",
+      "original_height": "1170px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a2fd1ff2472e.jpg",
+      "caption": "",
+      "source": "Connemara Smokehouse",
+      "original_width": "796px",
+      "original_height": "1080px"
+    }
+  ]
+}

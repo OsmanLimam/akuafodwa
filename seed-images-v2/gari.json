@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "white gari cassava flakes bowl",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e12c2cc1c0fb.jpg",
+      "caption": "",
+      "source": "Bon Appetit",
+      "original_width": "1687px",
+      "original_height": "1687px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/624d778d985c.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "798px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d01cb8c6d417.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/db563d4a269c.jpg",
+      "caption": "",
+      "source": "Savourous",
+      "original_width": "1254px",
+      "original_height": "1254px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bfb401dcb39e.png",
+      "caption": "",
+      "source": "baselli-ingenieria.cl",
+      "original_width": "1080px",
+      "original_height": "791px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/87da94ca9baa.jpg",
+      "caption": "",
+      "source": "komornik-bialystok.com.pl",
+      "original_width": "1910px",
+      "original_height": "1000px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "green bananas bunches fresh harvest",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fb538ca26a06.jpg",
+      "caption": "",
+      "source": "Gardener's Path",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dc2a921d3ae6.jpg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "6000px",
+      "original_height": "8000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d4ef77d2341e.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2000px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "colorful african food market stall with fresh vegetables and produce",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef48b6115fd6.jpg",
+      "caption": "",
+      "source": "Epicurious",
+      "original_width": "2560px",
+      "original_height": "1440px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/59919b59626e.jpg",
+      "caption": "",
+      "source": "The Creative Adventurer",
+      "original_width": "768px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4d830a76fa9c.jpg",
+      "caption": "",
+      "source": "Tripadvisor",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    }
+  ]
+}

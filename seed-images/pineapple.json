@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "ripe golden pineapples at a tropical market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/947f2ffed39a.jpg",
+      "caption": "",
+      "source": "Maui Pineapple Store",
+      "original_width": "2430px",
+      "original_height": "1620px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ba28cb844bd6.jpg",
+      "caption": "",
+      "source": "Maui Pineapple Store",
+      "original_width": "3000px",
+      "original_height": "1695px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1fe6470922dc.jpg",
+      "caption": "",
+      "source": "Harris Farm Markets",
+      "original_width": "1024px",
+      "original_height": "1280px"
+    }
+  ]
+}

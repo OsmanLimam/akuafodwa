@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "ripe mangoes in a crate at market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f93df73ae26a.jpg",
+      "caption": "",
+      "source": "Billy Penn at WHYY",
+      "original_width": "1024px",
+      "original_height": "768px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/01b887000142.jpg",
+      "caption": "",
+      "source": "Natural Mangoes",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8a87da761ec5.png",
+      "caption": "",
+      "source": "Organic Produce Network",
+      "original_width": "1778px",
+      "original_height": "1000px"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "ripe mangoes in small crate",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/420dd879494f.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1290px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b8e2a637196a.png",
+      "caption": "",
+      "source": "Ratnagiri Hapus Store",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/52b9f3c2ac6c.jpg",
+      "caption": "",
+      "source": "LA Times",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93d28d3a4550.jpg",
+      "caption": "",
+      "source": "Verde Fruits",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ffe980ed898d.jpg",
+      "caption": "",
+      "source": "ICD Online",
+      "original_width": "5184px",
+      "original_height": "3456px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/df40dcde08bd.jpg",
+      "caption": "",
+      "source": "BBC",
+      "original_width": "1975px",
+      "original_height": "1111px"
+    }
+  ]
+}

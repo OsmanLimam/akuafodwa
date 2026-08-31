@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh green okra pods in basket",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/944853edaf86.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1538px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b200a5e10e46.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "954px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9b07364d144d.jpg",
+      "caption": "",
+      "source": "beyondgumbo",
+      "original_width": "4000px",
+      "original_height": "3000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0fb5d3611515.jpg",
+      "caption": "",
+      "source": "Bonnie Plants",
+      "original_width": "1000px",
+      "original_height": "1172px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8b5de1bc2353.jpg",
+      "caption": "",
+      "source": "Lamberts Lately",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e71e5c75b6af.jpg",
+      "caption": "",
+      "source": "M M Nurseries",
+      "original_width": "1998px",
+      "original_height": "1998px"
+    }
+  ]
+}

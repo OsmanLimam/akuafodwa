@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fertilizer bags stacked at a farm supply store",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a7f34919cf34.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1064px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1388eb822f92.jpg",
+      "caption": "",
+      "source": "Yelp",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/081f49827ada.png",
+      "caption": "",
+      "source": "BuildASoil",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    }
+  ]
+}

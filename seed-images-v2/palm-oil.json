@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "red palm oil in bottle traditional",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d7d168fd52d2.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1829px",
+      "original_height": "2560px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/73103f012ff0.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "3000px",
+      "original_height": "3000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/47e8805d9a0c.png",
+      "caption": "",
+      "source": "Walmart",
+      "original_width": "2048px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7541513a617c.jpg",
+      "caption": "",
+      "source": "Inside Afrika - Afro Market",
+      "original_width": "1600px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/95d40ad85fff.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "2250px",
+      "original_height": "3000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/adfb23afd24a.jpg",
+      "caption": "",
+      "source": "Ubuy Cyprus",
+      "original_width": "674px",
+      "original_height": "1500px"
+    }
+  ]
+}

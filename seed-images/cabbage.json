@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh green cabbage heads harvest",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ac02a235bca9.jpg",
+      "caption": "",
+      "source": "Homestead and Chill",
+      "original_width": "1140px",
+      "original_height": "1183px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e1290bc1d68d.jpg",
+      "caption": "",
+      "source": "Bonnie Plants",
+      "original_width": "1800px",
+      "original_height": "1201px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8baeff5945b9.jpg",
+      "caption": "",
+      "source": "Renee's Garden",
+      "original_width": "1494px",
+      "original_height": "1196px"
+    }
+  ]
+}

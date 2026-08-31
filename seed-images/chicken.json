@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "live brown chickens at a poultry farm",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fb10315e1084.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b410f6feeddf.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1190px",
+      "original_height": "1700px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd66f59091ab.jpg",
+      "caption": "",
+      "source": "i Newspaper",
+      "original_width": "1200px",
+      "original_height": "675px"
+    }
+  ]
+}

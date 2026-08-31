@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh cassava roots bundle harvested",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/64d72949e66c.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "785px",
+      "original_height": "1277px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b8a13dac91e6.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a41b03101c97.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1167px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/16cee08a0a68.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "2304px",
+      "original_height": "1728px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c01e81db7b91.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5ae3941f8406.jpg",
+      "caption": "",
+      "source": "Sam's Caribbean Marketplace",
+      "original_width": "2000px",
+      "original_height": "2000px"
+    }
+  ]
+}

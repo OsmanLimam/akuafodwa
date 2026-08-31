@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh whole tilapia fish on ice",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/996c0f5ba9d7.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/33217691100b.jpg",
+      "caption": "",
+      "source": "123RF",
+      "original_width": "1300px",
+      "original_height": "975px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c8bec4a5ae44.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1174px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/efd9d7ee9718.png",
+      "caption": "",
+      "source": "Jining Forich Fruits & Vegetables Co.,Ltd - Jining Forich Fruits &  Vegetables Co.,Ltd",
+      "original_width": "4032px",
+      "original_height": "3024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4f6a2fe22655.jpg",
+      "caption": "",
+      "source": "Oceanbox",
+      "original_width": "2000px",
+      "original_height": "1500px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f9caeeebc4c2.jpg",
+      "caption": "",
+      "source": "Taste of Home",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    }
+  ]
+}

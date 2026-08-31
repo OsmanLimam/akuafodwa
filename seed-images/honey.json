@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "natural golden honey in a jar with honeycomb",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bca4a13293c5.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/af7e4bb578f6.jpg",
+      "caption": "",
+      "source": "Hows Your Day Honey",
+      "original_width": "1248px",
+      "original_height": "832px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fa7e61d4afc2.jpg",
+      "caption": "",
+      "source": "Farm Shoppe",
+      "original_width": "1050px",
+      "original_height": "1050px"
+    }
+  ]
+}

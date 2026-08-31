@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "milled white rice in open sack close up",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/521bbf6a3fa2.png",
+      "caption": "",
+      "source": "Valley Food Storage",
+      "original_width": "1920px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ad9802e20f51.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1291px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e74f28d12bec.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "821px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a55937dc35e3.jpg",
+      "caption": "",
+      "source": "Anthonys Goods",
+      "original_width": "2232px",
+      "original_height": "2430px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3213ba96e331.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "894px",
+      "original_height": "919px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4a26a965c77e.png",
+      "caption": "",
+      "source": "Walmart",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    }
+  ]
+}

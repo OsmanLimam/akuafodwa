@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "query": "basket of fresh red tomatoes at vegetable market",
+  "count": 8,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2aa01ddd2a3f.jpg",
+      "caption": "",
+      "source": "Burpee Seeds",
+      "original_width": "1400px",
+      "original_height": "600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f2d0c0ed509e.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6a974bdea62.jpeg",
+      "caption": "",
+      "source": "Zest Culinary Services",
+      "original_width": "2500px",
+      "original_height": "1667px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/27f85f0b9a8a.jpg",
+      "caption": "",
+      "source": "123RF",
+      "original_width": "866px",
+      "original_height": "1300px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7ed47ac0b580.jpg",
+      "caption": "",
+      "source": "123RF",
+      "original_width": "1300px",
+      "original_height": "866px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/de0251286294.jpg",
+      "caption": "",
+      "source": "Go Round Rock",
+      "original_width": "2488px",
+      "original_height": "2560px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/114e126a4fc9.jpg",
+      "caption": "",
+      "source": "Daily Express",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b65c671ead5a.jpg",
+      "caption": "",
+      "source": "Bando",
+      "original_width": "900px",
+      "original_height": "1125px"
+    }
+  ]
+}

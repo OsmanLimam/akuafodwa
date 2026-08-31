@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "query": "bunch of green plantains whole",
+  "count": 5,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f2372c3bdf01.jpg",
+      "caption": "",
+      "source": "Purvey'd",
+      "original_width": "1300px",
+      "original_height": "1300px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ab6d00d201b1.jpg",
+      "caption": "",
+      "source": "The Pioneer Woman",
+      "original_width": "1200px",
+      "original_height": "675px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/350e5e95064a.jpg",
+      "caption": "",
+      "source": "Minimalist Baker",
+      "original_width": "900px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9427a6d77ccd.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "925px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8cd39c37bda2.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1910px",
+      "original_height": "1000px"
+    }
+  ]
+}

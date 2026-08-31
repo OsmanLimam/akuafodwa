@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh tilapia fish arranged on ice",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8770ae6b49e1.png",
+      "caption": "",
+      "source": "Bradley's Fish",
+      "original_width": "1024px",
+      "original_height": "844px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a5e4e25b85ec.jpg",
+      "caption": "",
+      "source": "Sweet and Savory Meals",
+      "original_width": "1200px",
+      "original_height": "1800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a1bd5244517b.jpg",
+      "caption": "",
+      "source": "Tasty Recollections",
+      "original_width": "1732px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e54505afb69b.jpg",
+      "caption": "",
+      "source": "We Animals",
+      "original_width": "1200px",
+      "original_height": "799px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1ef83cba9846.png",
+      "caption": "",
+      "source": "The Fish Society",
+      "original_width": "1215px",
+      "original_height": "1215px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/747a2e9f79bc.jpg",
+      "caption": "",
+      "source": "Sugar Maple Farmhouse",
+      "original_width": "1800px",
+      "original_height": "1207px"
+    }
+  ]
+}

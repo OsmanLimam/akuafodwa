@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh green cabbage heads whole",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ac02a235bca9.jpg",
+      "caption": "",
+      "source": "Homestead and Chill",
+      "original_width": "1140px",
+      "original_height": "1183px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/73d722983177.jpg",
+      "caption": "",
+      "source": "The Delicious Life",
+      "original_width": "1200px",
+      "original_height": "1680px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b4bc25c59289.jpg",
+      "caption": "",
+      "source": "The Daring Gourmet",
+      "original_width": "1200px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cc3563e21304.jpg",
+      "caption": "",
+      "source": "Baker Creek Heirloom Seeds",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b168d291e867.jpg",
+      "caption": "",
+      "source": "Heartful Table",
+      "original_width": "1200px",
+      "original_height": "1800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a3725d04251a.jpg",
+      "caption": "",
+      "source": "Alibaba",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    }
+  ]
+}

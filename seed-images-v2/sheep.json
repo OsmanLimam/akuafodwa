@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "live djallonke sheep west african",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/68349800a349.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/59bd40d4b9fa.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/13e78247d30a.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/02a42fa63613.jpg",
+      "caption": "",
+      "source": "www.isdgs-aoba.org",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd2a3f85b04c.jpg",
+      "caption": "",
+      "source": "YUMPU",
+      "original_width": "1200px",
+      "original_height": "1794px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/094fe846c18f.jpg",
+      "caption": "",
+      "source": "Puzzle Factory",
+      "original_width": "1200px",
+      "original_height": "890px"
+    }
+  ]
+}

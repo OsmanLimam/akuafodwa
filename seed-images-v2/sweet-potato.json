@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh orange flesh sweet potatoes pile",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f4699af20a16.jpg",
+      "caption": "",
+      "source": "Tasty Thrifty Timely",
+      "original_width": "1440px",
+      "original_height": "2157px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2a40c3a4d035.jpg",
+      "caption": "",
+      "source": "Mobile Bay Magazine",
+      "original_width": "1065px",
+      "original_height": "813px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/130a87fa92e8.jpg",
+      "caption": "",
+      "source": "simply ceecee",
+      "original_width": "1200px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef6fc749b4e1.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "1080px",
+      "original_height": "1287px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6d4f7fa65678.jpg",
+      "caption": "",
+      "source": "The Full Helping",
+      "original_width": "1024px",
+      "original_height": "1536px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6ffda9aeede2.jpg",
+      "caption": "",
+      "source": "Gardener's Path",
+      "original_width": "1200px",
+      "original_height": "800px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "baskets of ripe red tomatoes close up photo",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f99959cdff1a.jpg",
+      "caption": "",
+      "source": "Homestead and Chill",
+      "original_width": "1200px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dd31acb9c125.jpg",
+      "caption": "",
+      "source": "Gardening Know How",
+      "original_width": "1600px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1a4f0a139a57.jpeg",
+      "caption": "",
+      "source": "Mangia with Michele",
+      "original_width": "782px",
+      "original_height": "1024px"
+    }
+  ]
+}

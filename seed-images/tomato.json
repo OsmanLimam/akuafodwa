@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "true",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9d5b63f91827.jpg",
+      "caption": "",
+      "source": "HBO Max",
+      "original_width": "3840px",
+      "original_height": "2160px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/44d2e0cbc401.png",
+      "caption": "",
+      "source": "thisistrue.co",
+      "original_width": "2492px",
+      "original_height": "760px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93a3333fd865.jpg",
+      "caption": "",
+      "source": "IMDb",
+      "original_width": "1000px",
+      "original_height": "1481px"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh green bananas bunch on stem",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9103abaaf384.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "8192px",
+      "original_height": "6144px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/301552630f48.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/374ca0701f57.jpeg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "3024px",
+      "original_height": "4032px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3599745a7ccd.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c903cb32c64c.jpeg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "3024px",
+      "original_height": "4032px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f0a446f0a057.jpg",
+      "caption": "",
+      "source": "Gardening Know How",
+      "original_width": "1131px",
+      "original_height": "848px"
+    }
+  ]
+}

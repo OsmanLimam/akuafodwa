@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "red onion bulbs in mesh bags at market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f562dee8af4d.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/100d5cecc0ed.jpg",
+      "caption": "",
+      "source": "Haxnicks",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ee8334836d27.jpg",
+      "caption": "",
+      "source": "Azure Farm",
+      "original_width": "2500px",
+      "original_height": "1875px"
+    }
+  ]
+}

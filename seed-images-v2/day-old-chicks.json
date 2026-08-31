@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "yellow day old chicks baby chickens",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/17c132d3ad9c.jpg",
+      "caption": "",
+      "source": "Meyer Hatchery",
+      "original_width": "1200px",
+      "original_height": "885px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8de3bdf8c285.jpg",
+      "caption": "",
+      "source": "Meyer Hatchery",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bc443b9dcd12.jpg",
+      "caption": "",
+      "source": "Farm Sanctuary",
+      "original_width": "1600px",
+      "original_height": "1068px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/97aecaf98f87.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/284be1844068.png",
+      "caption": "",
+      "source": "Flockjourney",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/99a568906c2d.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1065px",
+      "original_height": "1690px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "guinea fowl birds live at a farm",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6d73fd12bb7a.jpg",
+      "caption": "",
+      "source": "Pampered Chicken Mama",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ad79ed861669.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/393e46131f46.jpg",
+      "caption": "",
+      "source": "Britannica",
+      "original_width": "1600px",
+      "original_height": "1071px"
+    }
+  ]
+}

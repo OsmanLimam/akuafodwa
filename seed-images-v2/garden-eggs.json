@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh green garden eggs african eggplant in basket",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4707361910c0.png",
+      "caption": "",
+      "source": "Indeegenus",
+      "original_width": "900px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/72b2e0aba67d.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "3456px",
+      "original_height": "5184px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/92f710d3a908.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2a953fee49f9.jpg",
+      "caption": "",
+      "source": "Tumblr",
+      "original_width": "1086px",
+      "original_height": "820px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d656f90c979b.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0f9b8db41873.jpg",
+      "caption": "",
+      "source": "eBay",
+      "original_width": "1200px",
+      "original_height": "900px"
+    }
+  ]
+}

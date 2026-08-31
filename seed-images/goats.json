@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "live goats at a livestock market in africa",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1cfb70976309.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1157px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1305d2228c24.jpg",
+      "caption": "",
+      "source": "American Boer Goat Association",
+      "original_width": "1290px",
+      "original_height": "852px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bd2a0a6763c8.jpg",
+      "caption": "",
+      "source": "Bob Shop",
+      "original_width": "900px",
+      "original_height": "900px"
+    }
+  ]
+}

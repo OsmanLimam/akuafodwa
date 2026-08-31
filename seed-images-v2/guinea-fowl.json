@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "live guinea fowl birds",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0801f7ffc96f.jpg",
+      "caption": "",
+      "source": "AV Bird Hatchery",
+      "original_width": "1403px",
+      "original_height": "1034px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d37c99636a75.jpg",
+      "caption": "",
+      "source": "My Pet Chicken",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d0164b46e858.jpg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "1500px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a72558412845.jpg",
+      "caption": "",
+      "source": "The Martha Stewart Blog",
+      "original_width": "2702px",
+      "original_height": "3113px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/db5b5243f5f2.jpeg",
+      "caption": "",
+      "source": "Farm4Trade Suite",
+      "original_width": "1600px",
+      "original_height": "753px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f541208fb9e5.jpg",
+      "caption": "",
+      "source": "Booyong Conservation!",
+      "original_width": "4273px",
+      "original_height": "2705px"
+    }
+  ]
+}

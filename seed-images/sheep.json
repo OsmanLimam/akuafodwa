@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "sheep flock on a livestock farm",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d9c6b1ee25fc.jpg",
+      "caption": "",
+      "source": "Lost Oak Farm",
+      "original_width": "1536px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef6cce3fe3ac.jpg",
+      "caption": "",
+      "source": "Four Paws",
+      "original_width": "1920px",
+      "original_height": "1329px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/04e04cac03e3.jpg",
+      "caption": "",
+      "source": "www.farmanddairy.com",
+      "original_width": "1280px",
+      "original_height": "853px"
+    }
+  ]
+}

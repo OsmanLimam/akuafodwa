@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "live west african dwarf goat",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a93276d71d46.jpg",
+      "caption": "",
+      "source": "ZooMontana",
+      "original_width": "1600px",
+      "original_height": "1067px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/356d52f48f38.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/90ea827d5dc9.jpg",
+      "caption": "",
+      "source": "Farming My Backyard",
+      "original_width": "800px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/124cf0eeffc1.jpg",
+      "caption": "",
+      "source": "Atlas Obscura",
+      "original_width": "1280px",
+      "original_height": "960px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fd12c3c90b94.jpg",
+      "caption": "",
+      "source": "WKRN",
+      "original_width": "2048px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/582f7d17e874.jpg",
+      "caption": "",
+      "source": "Animals | HowStuffWorks",
+      "original_width": "1200px",
+      "original_height": "675px"
+    }
+  ]
+}

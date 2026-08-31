@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "dried white maize corn kernels in sacks",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d186a2ccba61.jpg",
+      "caption": "",
+      "source": "HungHau Foods Joint stock Company (HungHau Foods)",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/eb45ea210ced.jpg",
+      "caption": "",
+      "source": "Seabra Foods",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aa347b5a9b71.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "894px",
+      "original_height": "899px"
+    }
+  ]
+}

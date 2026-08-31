@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "raw cashew nuts in shell pile",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b50367e9a5f0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d2c437823c8a.jpg",
+      "caption": "",
+      "source": "Healthline",
+      "original_width": "1296px",
+      "original_height": "728px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dcf6df02d8d5.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1920px",
+      "original_height": "1920px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/685c5f01c81f.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a91699c29152.jpg",
+      "caption": "",
+      "source": "Qualytics Consulting",
+      "original_width": "1440px",
+      "original_height": "2560px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9d0cd1250210.jpg",
+      "caption": "",
+      "source": "tradeKorea.com",
+      "original_width": "1342px",
+      "original_height": "974px"
+    }
+  ]
+}

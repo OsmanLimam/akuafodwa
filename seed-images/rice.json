@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "white rice grains in an open sack",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c08eec6863c4.jpg",
+      "caption": "",
+      "source": "VectorStock",
+      "original_width": "925px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/171bd46b43c8.jpeg",
+      "caption": "",
+      "source": "Brandclub",
+      "original_width": "3000px",
+      "original_height": "3000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1ecb8ee29406.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    }
+  ]
+}

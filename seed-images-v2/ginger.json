@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh ginger roots rhizomes pile",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/13d711499b97.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c52f9a4d5edb.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1200px",
+      "original_height": "1690px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7941b0e6b1c0.jpg",
+      "caption": "",
+      "source": "Gardening Know How",
+      "original_width": "1254px",
+      "original_height": "836px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ab02134c6617.jpg",
+      "caption": "",
+      "source": "Insteading",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1189d422c9ad.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "2000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b61142b33533.jpg",
+      "caption": "",
+      "source": "KNKX",
+      "original_width": "2332px",
+      "original_height": "1553px"
+    }
+  ]
+}

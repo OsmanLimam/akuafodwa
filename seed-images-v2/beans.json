@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "dried red kidney beans in sack",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4d6db76d5f5e.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "2560px",
+      "original_height": "1507px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bcc16bff1155.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1065px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0304f5f1a63a.jpg",
+      "caption": "",
+      "source": "NutriMill",
+      "original_width": "1340px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3974ae114c7f.jpg",
+      "caption": "",
+      "source": "eBay",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c617ca0be35b.jpg",
+      "caption": "",
+      "source": "Kesar Grocery",
+      "original_width": "2000px",
+      "original_height": "2000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd26ff153464.jpg",
+      "caption": "",
+      "source": "Boonville Barn Collective",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    }
+  ]
+}

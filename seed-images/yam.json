@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "true",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/317af329359d.jpg",
+      "caption": "",
+      "source": "IMDb",
+      "original_width": "2550px",
+      "original_height": "2550px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7b9f92823be4.jpg",
+      "caption": "",
+      "source": "IMDb",
+      "original_width": "970px",
+      "original_height": "1388px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ee854e8b0fe7.jpg",
+      "caption": "",
+      "source": "Vogue",
+      "original_width": "2000px",
+      "original_height": "2006px"
+    }
+  ]
+}

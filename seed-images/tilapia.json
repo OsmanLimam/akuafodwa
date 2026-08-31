@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh tilapia fish on ice",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/049971f7d707.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cd71a2d4d2e5.jpg",
+      "caption": "",
+      "source": "Alibaba.com",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b66a4149173d.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "1260px",
+      "original_height": "709px"
+    }
+  ]
+}

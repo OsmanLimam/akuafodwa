@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "whole fresh pineapples stacked at fruit market",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f848c09f20c6.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "1500px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/50f4e84396f6.png",
+      "caption": "",
+      "source": "Vivu Journeys",
+      "original_width": "2303px",
+      "original_height": "1191px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1f4e42e82b2e.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7926db41cf77.jpg",
+      "caption": "",
+      "source": "Feels Like Home Blog",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a3efee453f0b.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "4000px",
+      "original_height": "5328px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f1a5088cf857.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    }
+  ]
+}

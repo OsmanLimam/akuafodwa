@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh ripe red tomatoes in wooden crate",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/abd3e5c596cf.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1690px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/92532aea042c.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "987px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c02b9438e10c.jpg",
+      "caption": "",
+      "source": "Pinterest",
+      "original_width": "736px",
+      "original_height": "1103px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b1ff50511a61.jpg",
+      "caption": "",
+      "source": "Taste of Home",
+      "original_width": "1500px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/394522c447de.jpg",
+      "caption": "",
+      "source": "Renee's Garden",
+      "original_width": "1800px",
+      "original_height": "981px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d50f826430a9.jpg",
+      "caption": "",
+      "source": "Sandia Seed Company",
+      "original_width": "1257px",
+      "original_height": "1113px"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-leaf: var(--leaf);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold: var(--gold);
+  --color-forest-deep: var(--forest-deep);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* AkuafoDwa palette: forest green & harvest gold on warm cream */
+  --cream: #fffdf5;
+  --ink: #1f2937;
+  --forest: #1b5e20;
+  --forest-deep: #124116;
+  --leaf: #4caf50;
+  --gold: #fbc02d;
+  --gold-deep: #c49000;
+  --orange: #f57c00;
+
+  --background: #fffdf5;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #1f2937;
+  --primary: #1b5e20;
+  --primary-foreground: #fffdf5;
+  --secondary: #124116;
+  --secondary-foreground: #e8f5e9;
+  --muted: #e8f5e9;
+  --muted-foreground: #52605a;
+  --accent: #fbc02d;
+  --accent-foreground: #1f2937;
+  --destructive: #d32f2f;
+  --border: #dde5de;
+  --input: #c5d2c6;
+  --ring: #2e7d32;
+  --chart-1: #1b5e20;
+  --chart-2: #2e7d32;
+  --chart-3: #fbc02d;
+  --chart-4: #f57c00;
+  --chart-5: #e8f5e9;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #1b5e20;
+  --sidebar-primary-foreground: #fffdf5;
+  --sidebar-accent: #e8f5e9;
+  --sidebar-accent-foreground: #1f2937;
+  --sidebar-border: #dde5de;
+  --sidebar-ring: #2e7d32;
+}
+
+/* Night farm: deep forest surfaces, pale green type, same accents */
+.dark {
+  --background: #0a1f10;
+  --foreground: #edf7ee;
+  --card: #12301c;
+  --card-foreground: #edf7ee;
+  --popover: #12301c;
+  --popover-foreground: #edf7ee;
+  --primary: #4caf50;
+  --primary-foreground: #071a0c;
+  --secondary: #1b3d24;
+  --secondary-foreground: #d7eed9;
+  --muted: #16351f;
+  --muted-foreground: #a3c4a8;
+  --accent: #2e7d32;
+  --accent-foreground: #e8f5e9;
+  --destructive: #e4574e;
+  --border: #24452c;
+  --input: #2c5236;
+  --ring: #4caf50;
+  --chart-1: #4caf50;
+  --chart-2: #2e7d32;
+  --chart-3: #fbc02d;
+  --chart-4: #a3c4a8;
+  --chart-5: #e8f5e9;
+  --sidebar: #12301c;
+  --sidebar-foreground: #edf7ee;
+  --sidebar-primary: #4caf50;
+  --sidebar-primary-foreground: #071a0c;
+  --sidebar-accent: #16351f;
+  --sidebar-accent-foreground: #edf7ee;
+  --sidebar-border: #24452c;
+  --sidebar-ring: #4caf50;
+}
+
+.dark ::selection {
+  background: #4caf50;
+  color: #071a0c;
+}
+
+.dark .nice-scroll {
+  scrollbar-color: #4caf5066 transparent;
+}
+.dark .nice-scroll::-webkit-scrollbar-thumb {
+  background: #4caf5055;
+}
+.dark .nice-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4caf5088;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01" on;
+  }
+  ::selection {
+    background: #2e7d32;
+    color: #fffdf5;
+  }
+}
+
+/* Custom scrollbar for long lists */
+.nice-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #2e7d3299 transparent;
+}
+.nice-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.nice-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.nice-scroll::-webkit-scrollbar-thumb {
+  background: #2e7d3266;
+  border-radius: 999px;
+}
+.nice-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2e7d32aa;
+}
+
+/* Kente-inspired striped accent used in hero + section dividers */
+.kente-stripes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #2e7d32 0px,
+    #2e7d32 14px,
+    #fbc02d 14px,
+    #fbc02d 24px,
+    #1b5e20 24px,
+    #1b5e20 38px,
+    #fffdf5 38px,
+    #fffdf5 44px
+  );
+}
+
+/* Subtle woven texture for hero panel */
+.hero-texture {
+  background-image: radial-gradient(rgba(232, 245, 233, 0.09) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}

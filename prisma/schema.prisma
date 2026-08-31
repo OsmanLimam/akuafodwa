@@ -1,0 +1,168 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String
+  phone          String?
+  passwordHash   String
+  role           String    @default("USER") // USER | ADMIN
+  sellerType     String? // FARMER | TRADER | WHOLESALER | RETAILER | PROCESSOR | RESTAURANT | INSTITUTION | LOGISTICS | OTHER
+  businessName   String?
+  bio            String?
+  profileImage   String?
+  identityStatus String   @default("UNVERIFIED") // UNVERIFIED | PENDING | VERIFIED | REJECTED
+  idDocumentType String? // GHANA_CARD | PASSPORT | DRIVERS_LICENSE | BUSINESS_REGISTRATION
+  idDocumentPath String? // PRIVATE: server-side path, never exposed to clients, never served from /public
+  verifiedAt     DateTime?
+  verificationNote String? // note from review, shown to the account owner only
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  listings        Listing[]
+  sessions        Session[]
+  threadsAsBuyer  OfferThread[]  @relation("BuyerThreads")
+  threadsAsSeller OfferThread[]  @relation("SellerThreads")
+  messages        OfferMessage[]
+  reviewsReceived Review[]       @relation("ReviewReceiver")
+  reviewsGiven    Review[]       @relation("ReviewGiver")
+  favorites       Favorite[]
+  pushSubscriptions PushSubscription[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  name      String    @unique
+  slug      String    @unique
+  icon      String?
+  isDefault Boolean   @default(false)
+  listings  Listing[]
+}
+
+model Listing {
+  id               String   @id @default(cuid())
+  title            String
+  description      String
+  price            Float
+  unit             String
+  quantity         Float
+  priceNegotiable  Boolean  @default(true)
+  region           String
+  city             String?
+  grade            String? // quality/grade, free text (e.g. Grade A, Premium, Standard)
+  packaging        String? // packaging type/size (e.g. 50kg maxi bag, wooden crate)
+  harvestInfo      String? // harvest date or season info, free text
+  productionMethod String? // Conventional | Organic practices (not certified) | Greenhouse | Free range | Wild harvested
+  minOrder         Float? // minimum order quantity, in the listing unit
+  fulfillment      String   @default("PICKUP") // PICKUP | DELIVERY | BOTH
+  status           String   @default("ACTIVE") // ACTIVE | SOLD | TAKEN_DOWN
+  isPremium        Boolean  @default(false) // pinned to the top of the market (admin-granted)
+  views            Int      @default(0)
+  sellerId        String
+  seller          User     @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id])
+  images          ListingImage[]
+  threads         OfferThread[]
+  favorites       Favorite[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ListingImage {
+  id        String  @id @default(cuid())
+  listingId String
+  listing   Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url       String
+  sortOrder Int     @default(0)
+}
+
+model OfferThread {
+  id        String         @id @default(cuid())
+  listingId String
+  listing   Listing        @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  buyerId   String
+  buyer     User           @relation("BuyerThreads", fields: [buyerId], references: [id], onDelete: Cascade)
+  sellerId  String
+  seller    User           @relation("SellerThreads", fields: [sellerId], references: [id], onDelete: Cascade)
+  status    String         @default("OPEN") // OPEN | NEGOTIATING | AGREED | COMPLETED | DECLINED | CANCELLED
+  messages  OfferMessage[]
+  review    Review?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model OfferMessage {
+  id        String       @id @default(cuid())
+  threadId  String
+  thread    OfferThread  @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  senderId  String? // null => system message
+  sender    User?        @relation(fields: [senderId], references: [id], onDelete: SetNull)
+  kind      String       @default("MESSAGE") // MESSAGE | OFFER | SYSTEM
+  quantity  Float?
+  price     Float?
+  body      String?
+  createdAt DateTime     @default(now())
+}
+
+model Review {
+  id        String      @id @default(cuid())
+  threadId  String      @unique
+  thread    OfferThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  sellerId  String
+  seller    User        @relation("ReviewReceiver", fields: [sellerId], references: [id], onDelete: Cascade)
+  buyerId   String
+  buyer     User        @relation("ReviewGiver", fields: [buyerId], references: [id], onDelete: Cascade)
+  rating    Int
+  comment   String?
+  createdAt DateTime    @default(now())
+}
+
+model Favorite {
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listingId String
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@id([userId, listingId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String? // admin or user who performed the action
+  action     String // e.g. LISTING_TAKEN_DOWN, IDENTITY_SUBMITTED, IDENTITY_APPROVED, IDENTITY_REJECTED
+  targetType String? // e.g. LISTING, USER
+  targetId   String?
+  detail     String?
+  createdAt  DateTime @default(now())
+}
+
+// Web push subscriptions (one row per browser/device that opted in).
+model PushSubscription {
+  id         String    @id @default(cuid())
+  userId     String
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  endpoint   String    @unique
+  p256dh     String
+  auth       String
+  userAgent  String?
+  createdAt  DateTime  @default(now())
+  lastUsedAt DateTime?
+}

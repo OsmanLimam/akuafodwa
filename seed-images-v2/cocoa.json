@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "dried cocoa beans heap",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0f2881adf526.jpg",
+      "caption": "",
+      "source": "Britannica",
+      "original_width": "1600px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/addc9a341544.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1225px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/758c8ef2e131.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "954px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bb8a2bdcb808.jpg",
+      "caption": "",
+      "source": "Chocolate Alchemy",
+      "original_width": "1800px",
+      "original_height": "1800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/624e4cfb78ad.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1125px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2d8ee5159860.jpg",
+      "caption": "",
+      "source": "Divine Chocolate",
+      "original_width": "1600px",
+      "original_height": "1744px"
+    }
+  ]
+}

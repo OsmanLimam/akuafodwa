@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "healthy brown hens on a free range chicken farm",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bf462c4af428.jpg",
+      "caption": "",
+      "source": "The Property Lovers",
+      "original_width": "2500px",
+      "original_height": "3333px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/da5fca59d944.jpg",
+      "caption": "",
+      "source": "Little House Living",
+      "original_width": "1200px",
+      "original_height": "813px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/78b91720e2b9.jpg",
+      "caption": "",
+      "source": "The 104 Homestead",
+      "original_width": "1200px",
+      "original_height": "825px"
+    }
+  ]
+}

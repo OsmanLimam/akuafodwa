@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh oranges in bags at a market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6e0599d35760.jpg",
+      "caption": "",
+      "source": "Taste of Home",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e110890d1c93.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "954px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2b96990dd296.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1910px",
+      "original_height": "1000px"
+    }
+  ]
+}

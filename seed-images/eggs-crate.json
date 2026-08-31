@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "brown eggs in plastic crates from poultry",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4e92e80e736b.jpg",
+      "caption": "",
+      "source": "Ubuy Guinea",
+      "original_width": "1377px",
+      "original_height": "1381px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3bc64aa17fbd.jpg",
+      "caption": "",
+      "source": "Amazon.ie",
+      "original_width": "894px",
+      "original_height": "883px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0ecc64392b6f.jpg",
+      "caption": "",
+      "source": "Simple Living Country Gal",
+      "original_width": "1024px",
+      "original_height": "768px"
+    }
+  ]
+}

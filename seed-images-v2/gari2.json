@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "white gari cassava grains in a bowl",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1bffc10339d3.jpg",
+      "caption": "",
+      "source": "saremtehran.com",
+      "original_width": "1664px",
+      "original_height": "1356px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/624d778d985c.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "798px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d265697df76c.png",
+      "caption": "",
+      "source": "African Delights Store",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/86c3ff31a04c.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/db563d4a269c.jpg",
+      "caption": "",
+      "source": "Savourous",
+      "original_width": "1254px",
+      "original_height": "1254px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8b1adeb2f04d.jpeg",
+      "caption": "",
+      "source": "SRB Groceries",
+      "original_width": "809px",
+      "original_height": "1080px"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh orange sweet potatoes in a pile",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9ce637ed283e.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "960px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9434054d88c0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "960px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5e533c448556.jpg",
+      "caption": "",
+      "source": "Epic Gardening",
+      "original_width": "1600px",
+      "original_height": "900px"
+    }
+  ]
+}

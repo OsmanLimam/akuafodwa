@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "gari cassava flakes west african food",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5529db698f2e.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "1086px",
+      "original_height": "1448px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2d75c2ed9b95.jpg",
+      "caption": "",
+      "source": "African Market Online",
+      "original_width": "768px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e78a6ef6d07b.jpg",
+      "caption": "",
+      "source": "Andy Hines",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    }
+  ]
+}

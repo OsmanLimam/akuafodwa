@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "garden eggs african eggplant in a basket",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3ee208ec77ca.jpg",
+      "caption": "",
+      "source": "autotekbil.no",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/72b2e0aba67d.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "3456px",
+      "original_height": "5184px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d656f90c979b.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh brown eggs in tray crate",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bc1fc8538933.jpg",
+      "caption": "",
+      "source": "Shutterstock",
+      "original_width": "1500px",
+      "original_height": "1101px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a232702d4e1a.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "951px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0be99de277bb.jpg",
+      "caption": "",
+      "source": "Click Fork",
+      "original_width": "1280px",
+      "original_height": "829px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c5ced94d50b6.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "963px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/171f50ae2d2a.jpg",
+      "caption": "",
+      "source": "Adobe Stock",
+      "original_width": "1000px",
+      "original_height": "836px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/636db53d4783.jpg",
+      "caption": "",
+      "source": "Basinger's Beef",
+      "original_width": "2048px",
+      "original_height": "2048px"
+    }
+  ]
+}

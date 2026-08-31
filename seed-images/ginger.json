@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh ginger roots in a pile at market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e10927122c58.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "775px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7b4c2957b4dd.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "4500px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1ee17afd9462.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "731px",
+      "original_height": "1390px"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh green plantain bunch harvested",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/84f889497a74.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "951px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4a4de46cfb94.jpg",
+      "caption": "",
+      "source": "Incredible Edible Landscapes",
+      "original_width": "1214px",
+      "original_height": "1619px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1263c5a5cb91.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1c13ff230e11.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "2000px",
+      "original_height": "1335px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/605de36015ec.jpg",
+      "caption": "",
+      "source": "Food and Recipes - HowStuffWorks",
+      "original_width": "1200px",
+      "original_height": "676px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0b2a5e304f9d.jpeg",
+      "caption": "",
+      "source": "Walmart",
+      "original_width": "3000px",
+      "original_height": "3000px"
+    }
+  ]
+}

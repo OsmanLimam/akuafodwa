@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "red palm oil in bottles and jerrycans",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/47e8e0359e25.jpg",
+      "caption": "",
+      "source": "Global Sources",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/691d50b1b0ab.jpg",
+      "caption": "",
+      "source": "Punch Healthwise",
+      "original_width": "2560px",
+      "original_height": "1920px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0d10a724bf11.png",
+      "caption": "",
+      "source": "Olexo Group",
+      "original_width": "2560px",
+      "original_height": "2560px"
+    }
+  ]
+}

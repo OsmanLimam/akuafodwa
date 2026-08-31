@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "cocoyam taro roots fresh harvest",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e901864e481e.jpg",
+      "caption": "",
+      "source": "Amazon UK",
+      "original_width": "1097px",
+      "original_height": "1097px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4248c3962273.jpg",
+      "caption": "",
+      "source": "Britannica",
+      "original_width": "1600px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9960d7be5c5c.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1290px"
+    }
+  ]
+}

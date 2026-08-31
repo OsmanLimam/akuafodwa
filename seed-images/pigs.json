@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "pigs at a pig farm livestock",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cb08d4aa1820.jpeg",
+      "caption": "",
+      "source": "| New Roots Institute",
+      "original_width": "1254px",
+      "original_height": "836px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e12a0561485e.jpg",
+      "caption": "",
+      "source": "OneGreenPlanet",
+      "original_width": "1600px",
+      "original_height": "1067px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f28e02f67d89.jpg",
+      "caption": "",
+      "source": "LA Times",
+      "original_width": "1200px",
+      "original_height": "867px"
+    }
+  ]
+}

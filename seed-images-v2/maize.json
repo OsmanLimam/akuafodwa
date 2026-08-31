@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "dried white maize grains in sack",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6ba4330b555.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aa5c2ce19bd5.png",
+      "caption": "",
+      "source": "African Market Online",
+      "original_width": "1024px",
+      "original_height": "1536px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/357a63cdc1d0.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "902px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/de080ac613eb.jpg",
+      "caption": "",
+      "source": "Azure Standard",
+      "original_width": "1250px",
+      "original_height": "1250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/731c0904b58d.jpeg",
+      "caption": "",
+      "source": "Walmart",
+      "original_width": "1486px",
+      "original_height": "1717px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5305a31930bb.jpg",
+      "caption": "",
+      "source": "Food To Live",
+      "original_width": "2000px",
+      "original_height": "2000px"
+    }
+  ]
+}

@@ -1,0 +1,1558 @@
+{
+ "banana": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-0.jpeg",
+   "source": "Pexels",
+   "w": "8192px",
+   "h": "6144px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-1.jpg",
+   "source": "Alamy",
+   "w": "866px",
+   "h": "1390px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-2.jpeg",
+   "source": "Reddit",
+   "w": "3024px",
+   "h": "4032px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-3.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-4.jpeg",
+   "source": "Reddit",
+   "w": "3024px",
+   "h": "4032px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/banana-5.jpg",
+   "source": "Gardening Know How",
+   "w": "1131px",
+   "h": "848px"
+  }
+ ],
+ "beans": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-0.jpg",
+   "source": "Amazon.com",
+   "w": "2560px",
+   "h": "1507px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "1065px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-2.jpg",
+   "source": "NutriMill",
+   "w": "1340px",
+   "h": "1600px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-3.jpg",
+   "source": "eBay",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-4.jpg",
+   "source": "Kesar Grocery",
+   "w": "2000px",
+   "h": "2000px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/beans-5.jpg",
+   "source": "Boonville Barn Collective",
+   "w": "1024px",
+   "h": "1024px"
+  }
+ ],
+ "cabbage": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-0.jpg",
+   "source": "Homestead and Chill",
+   "w": "1140px",
+   "h": "1183px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-1.jpg",
+   "source": "The Delicious Life",
+   "w": "1200px",
+   "h": "1680px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-2.jpg",
+   "source": "The Daring Gourmet",
+   "w": "1200px",
+   "h": "1600px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-3.jpg",
+   "source": "Baker Creek Heirloom Seeds",
+   "w": "1080px",
+   "h": "1080px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-4.jpg",
+   "source": "Heartful Table",
+   "w": "1200px",
+   "h": "1800px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cabbage-5.jpg",
+   "source": "Alibaba",
+   "w": "1200px",
+   "h": "1200px"
+  }
+ ],
+ "cashew": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "1064px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-1.jpg",
+   "source": "– OTIS BÌNH PHƯỚC",
+   "w": "1024px",
+   "h": "1024px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-2.jpg",
+   "source": "Fastachi",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-3.jpg",
+   "source": "Bã điều Bình Phước",
+   "w": "1200px",
+   "h": "800px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-4.jpg",
+   "source": "Nuts.com",
+   "w": "5760px",
+   "h": "3842px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cashew-5.jpg",
+   "source": "Etsy",
+   "w": "1024px",
+   "h": "1024px"
+  }
+ ],
+ "cassava": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-0.jpg",
+   "source": "Etsy",
+   "w": "785px",
+   "h": "1277px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-1.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-2.jpg",
+   "source": "DepositPhotos",
+   "w": "1600px",
+   "h": "1167px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-3.jpg",
+   "source": "Etsy",
+   "w": "2304px",
+   "h": "1728px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-4.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cassava-5.jpg",
+   "source": "Sam's Caribbean Marketplace",
+   "w": "2000px",
+   "h": "2000px"
+  }
+ ],
+ "chicken": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-1.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1049px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-2.jpg",
+   "source": "DepositPhotos",
+   "w": "1600px",
+   "h": "1167px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-3.jpg",
+   "source": "Britannica",
+   "w": "1600px",
+   "h": "1071px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-4.jpg",
+   "source": "Farm Transparency Project",
+   "w": "1819px",
+   "h": "1200px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/chicken-5.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  }
+ ],
+ "cocoa": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-0.jpg",
+   "source": "Britannica",
+   "w": "1600px",
+   "h": "1200px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-1.jpg",
+   "source": "Shutterstock",
+   "w": "1500px",
+   "h": "1225px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-2.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "954px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-3.jpg",
+   "source": "Chocolate Alchemy",
+   "w": "1800px",
+   "h": "1800px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-4.jpg",
+   "source": "Shutterstock",
+   "w": "1125px",
+   "h": "1600px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoa-5.jpg",
+   "source": "Divine Chocolate",
+   "w": "1600px",
+   "h": "1744px"
+  }
+ ],
+ "cocoyam": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "958px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-1.jpg",
+   "source": "Amazon.com",
+   "w": "1120px",
+   "h": "1160px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-2.jpg",
+   "source": "123RF",
+   "w": "974px",
+   "h": "1300px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-3.jpg",
+   "source": "Etsy",
+   "w": "2250px",
+   "h": "3000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-4.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1290px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/cocoyam-5.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  }
+ ],
+ "day-old-chicks": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-0.jpg",
+   "source": "Meyer Hatchery",
+   "w": "1200px",
+   "h": "885px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-1.jpg",
+   "source": "Meyer Hatchery",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-2.jpg",
+   "source": "Farm Sanctuary",
+   "w": "1600px",
+   "h": "1068px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-3.jpg",
+   "source": "Unsplash",
+   "w": "3000px",
+   "h": "2000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-4.png",
+   "source": "Flockjourney",
+   "w": "1080px",
+   "h": "1080px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/day-old-chicks-5.jpg",
+   "source": "Dreamstime.com",
+   "w": "1065px",
+   "h": "1690px"
+  }
+ ],
+ "eggs": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-0.jpg",
+   "source": "Shutterstock",
+   "w": "1500px",
+   "h": "1101px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "951px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-2.jpg",
+   "source": "Click Fork",
+   "w": "1280px",
+   "h": "829px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-3.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "963px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-4.jpg",
+   "source": "Adobe Stock",
+   "w": "1000px",
+   "h": "836px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/eggs-5.jpg",
+   "source": "Basinger's Beef",
+   "w": "2048px",
+   "h": "2048px"
+  }
+ ],
+ "fertilizer": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-0.png",
+   "source": "Pak Agri Store - Connecting Pakistani Farmers with Quality Agricultural  Equipment",
+   "w": "1254px",
+   "h": "1254px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-1.png",
+   "source": "groupeluanosarl.com",
+   "w": "1536px",
+   "h": "1024px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-2.jpg",
+   "source": "Agropests",
+   "w": "3840px",
+   "h": "4690px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-3.jpg",
+   "source": "Amazon.com",
+   "w": "1910px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-4.png",
+   "source": "Alibaba.com",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/fertilizer-5.webp",
+   "source": "IR Farm",
+   "w": "1946px",
+   "h": "1946px"
+  }
+ ],
+ "garden-eggs": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-0.png",
+   "source": "Indeegenus",
+   "w": "900px",
+   "h": "1200px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-1.jpeg",
+   "source": "Pexels",
+   "w": "3456px",
+   "h": "5184px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-2.jpg",
+   "source": "Alamy",
+   "w": "866px",
+   "h": "1390px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-3.jpg",
+   "source": "Tumblr",
+   "w": "1086px",
+   "h": "820px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-4.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/garden-eggs-5.jpg",
+   "source": "eBay",
+   "w": "1200px",
+   "h": "900px"
+  }
+ ],
+ "gari": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-0.jpg",
+   "source": "Bon Appetit",
+   "w": "1687px",
+   "h": "1687px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "798px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-2.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-3.jpg",
+   "source": "Savourous",
+   "w": "1254px",
+   "h": "1254px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-4.png",
+   "source": "baselli-ingenieria.cl",
+   "w": "1080px",
+   "h": "791px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/gari-5.jpg",
+   "source": "komornik-bialystok.com.pl",
+   "w": "1910px",
+   "h": "1000px"
+  }
+ ],
+ "ginger": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-0.jpg",
+   "source": "Etsy",
+   "w": "1024px",
+   "h": "1024px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-1.jpg",
+   "source": "Dreamstime.com",
+   "w": "1200px",
+   "h": "1690px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-2.jpg",
+   "source": "Gardening Know How",
+   "w": "1254px",
+   "h": "836px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-3.jpg",
+   "source": "Insteading",
+   "w": "1200px",
+   "h": "800px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-4.jpg",
+   "source": "Amazon.com",
+   "w": "2000px",
+   "h": "2000px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/ginger-5.jpg",
+   "source": "KNKX",
+   "w": "2332px",
+   "h": "1553px"
+  }
+ ],
+ "goat": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-0.jpg",
+   "source": "ZooMontana",
+   "w": "1600px",
+   "h": "1067px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-2.jpg",
+   "source": "Farming My Backyard",
+   "w": "800px",
+   "h": "1200px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-3.jpg",
+   "source": "Atlas Obscura",
+   "w": "1280px",
+   "h": "960px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-4.jpg",
+   "source": "WKRN",
+   "w": "2048px",
+   "h": "2048px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/goat-5.jpg",
+   "source": "Animals | HowStuffWorks",
+   "w": "1200px",
+   "h": "675px"
+  }
+ ],
+ "groundnut": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-0.jpg",
+   "source": "Unsplash",
+   "w": "3000px",
+   "h": "2250px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-1.jpg",
+   "source": "Urban Nature Store",
+   "w": "1200px",
+   "h": "1200px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-2.jpg",
+   "source": "DepositPhotos",
+   "w": "1600px",
+   "h": "1167px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-3.jpg",
+   "source": "Agrocrops",
+   "w": "1160px",
+   "h": "2048px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-4.png",
+   "source": "Elk Mound Seed",
+   "w": "1080px",
+   "h": "1080px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/groundnut-5.png",
+   "source": "Bird Seed Store",
+   "w": "1920px",
+   "h": "2560px"
+  }
+ ],
+ "guinea-fowl": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-0.jpg",
+   "source": "AV Bird Hatchery",
+   "w": "1403px",
+   "h": "1034px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-1.jpg",
+   "source": "My Pet Chicken",
+   "w": "1080px",
+   "h": "1080px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-2.jpg",
+   "source": "Reddit",
+   "w": "1500px",
+   "h": "1000px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-3.jpg",
+   "source": "The Martha Stewart Blog",
+   "w": "2702px",
+   "h": "3113px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-4.jpeg",
+   "source": "Farm4Trade Suite",
+   "w": "1600px",
+   "h": "753px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/guinea-fowl-5.jpg",
+   "source": "Booyong Conservation!",
+   "w": "4273px",
+   "h": "2705px"
+  }
+ ],
+ "honey": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-0.jpg",
+   "source": "Amazon.com",
+   "w": "1600px",
+   "h": "1600px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-1.jpg",
+   "source": "Bell Honey",
+   "w": "1445px",
+   "h": "963px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-2.jpg",
+   "source": "Amazon.com",
+   "w": "894px",
+   "h": "898px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-3.jpg",
+   "source": "Appalachian Wax Works",
+   "w": "1946px",
+   "h": "2433px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-4.png",
+   "source": "Maters & Co",
+   "w": "1080px",
+   "h": "1080px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/honey-5.jpg",
+   "source": "Amamio Farm Products",
+   "w": "1946px",
+   "h": "1946px"
+  }
+ ],
+ "mackerel": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-0.jpg",
+   "source": "Taste of Artisan",
+   "w": "1000px",
+   "h": "1288px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-1.jpg",
+   "source": "Great Italian Chefs",
+   "w": "1426px",
+   "h": "713px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-2.jpg",
+   "source": "Hamiltons Fish",
+   "w": "3024px",
+   "h": "3024px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-3.jpg",
+   "source": "Kitchen Laughter",
+   "w": "1200px",
+   "h": "1800px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-4.jpg",
+   "source": "- WILD GREENS & SARDINES",
+   "w": "850px",
+   "h": "1170px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mackerel-5.jpg",
+   "source": "Connemara Smokehouse",
+   "w": "796px",
+   "h": "1080px"
+  }
+ ],
+ "maize": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-1.png",
+   "source": "African Market Online",
+   "w": "1024px",
+   "h": "1536px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-2.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "902px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-3.jpg",
+   "source": "Azure Standard",
+   "w": "1250px",
+   "h": "1250px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-4.jpeg",
+   "source": "Walmart",
+   "w": "1486px",
+   "h": "1717px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/maize-5.jpg",
+   "source": "Food To Live",
+   "w": "2000px",
+   "h": "2000px"
+  }
+ ],
+ "mango": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-0.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1290px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-1.png",
+   "source": "Ratnagiri Hapus Store",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-2.jpg",
+   "source": "LA Times",
+   "w": "1200px",
+   "h": "675px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-3.jpg",
+   "source": "Verde Fruits",
+   "w": "1200px",
+   "h": "800px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-4.jpg",
+   "source": "ICD Online",
+   "w": "5184px",
+   "h": "3456px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/mango-5.jpg",
+   "source": "BBC",
+   "w": "1975px",
+   "h": "1111px"
+  }
+ ],
+ "okra": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-0.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1538px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "954px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-2.jpg",
+   "source": "beyondgumbo",
+   "w": "4000px",
+   "h": "3000px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-3.jpg",
+   "source": "Bonnie Plants",
+   "w": "1000px",
+   "h": "1172px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-4.jpg",
+   "source": "Lamberts Lately",
+   "w": "1200px",
+   "h": "1200px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/okra-5.jpg",
+   "source": "M M Nurseries",
+   "w": "1998px",
+   "h": "1998px"
+  }
+ ],
+ "onion": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-0.jpg",
+   "source": "Amazon.com",
+   "w": "1601px",
+   "h": "1601px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-1.jpg",
+   "source": "Alibaba.com",
+   "w": "1706px",
+   "h": "1280px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-2.jpg",
+   "source": "Alibaba.com",
+   "w": "1280px",
+   "h": "1280px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-3.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-4.jpg",
+   "source": "The Chopping Block",
+   "w": "1128px",
+   "h": "900px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/onion-5.jpg",
+   "source": "Reddit",
+   "w": "3000px",
+   "h": "4000px"
+  }
+ ],
+ "orange": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-0.jpeg",
+   "source": "Reddit",
+   "w": "4885px",
+   "h": "3664px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-1.jpg",
+   "source": "DoorDash",
+   "w": "1194px",
+   "h": "672px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-2.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1215px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-3.jpg",
+   "source": "Amazon.com",
+   "w": "1910px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-4.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/orange-5.jpg",
+   "source": "Taste of Home",
+   "w": "1200px",
+   "h": "1200px"
+  }
+ ],
+ "palm-oil": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-0.jpg",
+   "source": "Amazon.com",
+   "w": "1829px",
+   "h": "2560px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-1.jpg",
+   "source": "Etsy",
+   "w": "3000px",
+   "h": "3000px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-2.png",
+   "source": "Walmart",
+   "w": "2048px",
+   "h": "2048px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-3.jpg",
+   "source": "Inside Afrika - Afro Market",
+   "w": "1600px",
+   "h": "1600px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-4.jpg",
+   "source": "Etsy",
+   "w": "2250px",
+   "h": "3000px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/palm-oil-5.jpg",
+   "source": "Ubuy Cyprus",
+   "w": "674px",
+   "h": "1500px"
+  }
+ ],
+ "papaya": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-0.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "990px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-1.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-2.jpg",
+   "source": "Healthline",
+   "w": "1296px",
+   "h": "728px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-3.jpg",
+   "source": "Belize Travel Blog - Chaa Creek",
+   "w": "1440px",
+   "h": "1920px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-4.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/papaya-5.jpg",
+   "source": "Etsy",
+   "w": "1000px",
+   "h": "1000px"
+  }
+ ],
+ "pepper": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "957px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-1.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1189px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-2.jpg",
+   "source": "123RF",
+   "w": "866px",
+   "h": "1300px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-3.jpg",
+   "source": "Yelp",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-4.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pepper-5.jpeg",
+   "source": "Reddit",
+   "w": "900px",
+   "h": "1200px"
+  }
+ ],
+ "pig": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-0.png",
+   "source": "World Animal Protection",
+   "w": "1280px",
+   "h": "1126px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-1.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-2.jpg",
+   "source": "BBC",
+   "w": "4032px",
+   "h": "2268px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-3.jpg",
+   "source": "Business Insider",
+   "w": "800px",
+   "h": "1143px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-4.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pig-5.jpg",
+   "source": "The New York Times",
+   "w": "3000px",
+   "h": "1688px"
+  }
+ ],
+ "pineapple": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-0.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1156px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-1.jpg",
+   "source": "Amazon.in",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-2.jpg",
+   "source": "Shutterstock",
+   "w": "1001px",
+   "h": "1600px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-3.jpg",
+   "source": "Dreamstime.com",
+   "w": "1066px",
+   "h": "1690px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-4.png",
+   "source": "Rare Dragon Fruit",
+   "w": "2000px",
+   "h": "2000px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/pineapple-5.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  }
+ ],
+ "plantain": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/plantain-0.jpg",
+   "source": "Purvey'd",
+   "w": "1300px",
+   "h": "1300px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/plantain-1.jpg",
+   "source": "The Pioneer Woman",
+   "w": "1200px",
+   "h": "675px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/plantain-2.jpg",
+   "source": "Minimalist Baker",
+   "w": "900px",
+   "h": "900px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/plantain-3.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "925px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/plantain-4.jpg",
+   "source": "Amazon.com",
+   "w": "1910px",
+   "h": "1000px"
+  }
+ ],
+ "rice": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-0.jpg",
+   "source": "The Local Markethouse",
+   "w": "3840px",
+   "h": "5120px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-1.png",
+   "source": "Umaya MarketPlace",
+   "w": "1726px",
+   "h": "2514px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-2.png",
+   "source": "White House Farms",
+   "w": "900px",
+   "h": "900px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-3.jpg",
+   "source": "Alibaba.com",
+   "w": "1000px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-4.jpg",
+   "source": "Bob's Red Mill",
+   "w": "850px",
+   "h": "1132px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/rice-5.jpg",
+   "source": "Alamy",
+   "w": "866px",
+   "h": "1390px"
+  }
+ ],
+ "sheep": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-1.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-2.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-3.jpg",
+   "source": "www.isdgs-aoba.org",
+   "w": "1280px",
+   "h": "720px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-4.jpg",
+   "source": "YUMPU",
+   "w": "1200px",
+   "h": "1794px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sheep-5.jpg",
+   "source": "Puzzle Factory",
+   "w": "1200px",
+   "h": "890px"
+  }
+ ],
+ "sweet-potato": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-0.jpg",
+   "source": "Tasty Thrifty Timely",
+   "w": "1440px",
+   "h": "2157px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-1.jpg",
+   "source": "Mobile Bay Magazine",
+   "w": "1065px",
+   "h": "813px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-2.jpg",
+   "source": "simply ceecee",
+   "w": "1200px",
+   "h": "1600px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-3.jpg",
+   "source": "Etsy",
+   "w": "1080px",
+   "h": "1287px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-4.jpg",
+   "source": "The Full Helping",
+   "w": "1024px",
+   "h": "1536px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/sweet-potato-5.jpg",
+   "source": "Gardener's Path",
+   "w": "1200px",
+   "h": "800px"
+  }
+ ],
+ "tilapia": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-0.jpg",
+   "source": "Alamy",
+   "w": "1300px",
+   "h": "956px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-1.jpg",
+   "source": "123RF",
+   "w": "1300px",
+   "h": "975px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-2.jpg",
+   "source": "DepositPhotos",
+   "w": "1600px",
+   "h": "1174px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-3.png",
+   "source": "Jining Forich Fruits & Vegetables Co.,Ltd - Jining Forich Fruits &  Vegetables Co.,Ltd",
+   "w": "4032px",
+   "h": "3024px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-4.jpg",
+   "source": "Oceanbox",
+   "w": "2000px",
+   "h": "1500px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tilapia-5.jpg",
+   "source": "Taste of Home",
+   "w": "1024px",
+   "h": "1024px"
+  }
+ ],
+ "tomato": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-0.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "1690px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-1.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "987px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-2.jpg",
+   "source": "Pinterest",
+   "w": "736px",
+   "h": "1103px"
+  },
+  {
+   "idx": 3,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-3.jpg",
+   "source": "Taste of Home",
+   "w": "1500px",
+   "h": "1000px"
+  },
+  {
+   "idx": 4,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-4.jpg",
+   "source": "Renee's Garden",
+   "w": "1800px",
+   "h": "981px"
+  },
+  {
+   "idx": 5,
+   "file": "/home/z/my-project/seed-images-v2/candidates/tomato-5.jpg",
+   "source": "Sandia Seed Company",
+   "w": "1257px",
+   "h": "1113px"
+  }
+ ],
+ "yam": [
+  {
+   "idx": 0,
+   "file": "/home/z/my-project/seed-images-v2/candidates/yam-0.jpeg",
+   "source": "Pexels",
+   "w": "4253px",
+   "h": "5316px"
+  },
+  {
+   "idx": 1,
+   "file": "/home/z/my-project/seed-images-v2/candidates/yam-1.jpg",
+   "source": "Dreamstime.com",
+   "w": "1600px",
+   "h": "990px"
+  },
+  {
+   "idx": 2,
+   "file": "/home/z/my-project/seed-images-v2/candidates/yam-2.jpg",
+   "source": "YouTube",
+   "w": "1280px",
+   "h": "720px"
+  }
+ ]
+}

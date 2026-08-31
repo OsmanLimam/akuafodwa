@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh sweet oranges in mesh bag",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/028302437941.jpeg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "4885px",
+      "original_height": "3664px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e2cbd1df6bbb.jpg",
+      "caption": "",
+      "source": "DoorDash",
+      "original_width": "1194px",
+      "original_height": "672px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c5cfa8f7035c.jpg",
+      "caption": "",
+      "source": "Dreamstime.com",
+      "original_width": "1600px",
+      "original_height": "1215px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4f3c1d199162.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1910px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6b7ae331a976.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f4e440a8a949.jpg",
+      "caption": "",
+      "source": "Taste of Home",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    }
+  ]
+}

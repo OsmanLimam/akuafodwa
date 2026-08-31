@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "raw cashew nuts in shells in a sack",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3cf883463f4c.jpg",
+      "caption": "",
+      "source": "South 40 Snacks",
+      "original_width": "2048px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3f9ab98a5c22.jpg",
+      "caption": "",
+      "source": "Alibaba.com",
+      "original_width": "2560px",
+      "original_height": "2560px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/906f9fa4a5d3.jpg",
+      "caption": "",
+      "source": "Steamaxindia",
+      "original_width": "1715px",
+      "original_height": "1062px"
+    }
+  ]
+}

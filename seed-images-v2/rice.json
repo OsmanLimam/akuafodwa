@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "milled white rice grains in sack",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef27675c9623.jpg",
+      "caption": "",
+      "source": "The Local Markethouse",
+      "original_width": "3840px",
+      "original_height": "5120px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c78d0d695bde.png",
+      "caption": "",
+      "source": "Umaya MarketPlace",
+      "original_width": "1726px",
+      "original_height": "2514px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/97ac89798a10.png",
+      "caption": "",
+      "source": "White House Farms",
+      "original_width": "900px",
+      "original_height": "900px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e5bc49e2efe3.jpg",
+      "caption": "",
+      "source": "Alibaba.com",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/28bfe13dd730.jpg",
+      "caption": "",
+      "source": "Bob's Red Mill",
+      "original_width": "850px",
+      "original_height": "1132px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1c640f312bfd.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "866px",
+      "original_height": "1390px"
+    }
+  ]
+}

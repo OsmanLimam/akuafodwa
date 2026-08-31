@@ -1,0 +1,30 @@
+{
+ "success": true,
+ "query": "pile of fresh yam tubers",
+ "count": 3,
+ "ranked": false,
+ "captioned_count": 0,
+ "results": [
+  {
+   "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d13be860aad3.jpeg",
+   "caption": "",
+   "source": "Pexels",
+   "original_width": "4253px",
+   "original_height": "5316px"
+  },
+  {
+   "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/153f4f82ce11.jpg",
+   "caption": "",
+   "source": "Dreamstime.com",
+   "original_width": "1600px",
+   "original_height": "990px"
+  },
+  {
+   "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4061e751737b.jpg",
+   "caption": "",
+   "source": "YouTube",
+   "original_width": "1280px",
+   "original_height": "720px"
+  }
+ ]
+}

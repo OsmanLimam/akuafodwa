@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "smoked fish display at an african market",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e890efb40deb.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "954px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3ec87172d5c4.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/931d6620f6f3.jpg",
+      "caption": "",
+      "source": "Nationwide Log Homes",
+      "original_width": "1530px",
+      "original_height": "1530px"
+    }
+  ]
+}

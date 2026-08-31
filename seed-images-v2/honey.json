@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "raw natural honey in jar with honeycomb",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d75dca45e5fb.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "1600px",
+      "original_height": "1600px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/977963f21a58.jpg",
+      "caption": "",
+      "source": "Bell Honey",
+      "original_width": "1445px",
+      "original_height": "963px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7f9f07042ceb.jpg",
+      "caption": "",
+      "source": "Amazon.com",
+      "original_width": "894px",
+      "original_height": "898px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/69c68ccb6da3.jpg",
+      "caption": "",
+      "source": "Appalachian Wax Works",
+      "original_width": "1946px",
+      "original_height": "2433px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/93448fcc2a82.png",
+      "caption": "",
+      "source": "Maters & Co",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2e4979c267ae.jpg",
+      "caption": "",
+      "source": "Amamio Farm Products",
+      "original_width": "1946px",
+      "original_height": "1946px"
+    }
+  ]
+}

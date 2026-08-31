@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh cassava tubers heap for sale",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6c291898433a.jpg",
+      "caption": "",
+      "source": "OBS Ingredients",
+      "original_width": "2000px",
+      "original_height": "1333px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/02480ec7387a.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "2076px",
+      "original_height": "1887px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c4a3b3d2555f.jpg",
+      "caption": "",
+      "source": "Mongabay",
+      "original_width": "1536px",
+      "original_height": "1397px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9e0651fcee1a.jpeg",
+      "caption": "",
+      "source": "Pexels",
+      "original_width": "2500px",
+      "original_height": "1667px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a41b03101c97.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1167px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bfb745efb3d0.jpg",
+      "caption": "",
+      "source": "LinkedIn",
+      "original_width": "1035px",
+      "original_height": "1000px"
+    }
+  ]
+}

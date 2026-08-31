@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "west african market stall with fresh produce vegetables",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/68494952eb51.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ef48b6115fd6.jpg",
+      "caption": "",
+      "source": "Epicurious",
+      "original_width": "2560px",
+      "original_height": "1440px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/39a688d42bea.jpg",
+      "caption": "",
+      "source": "The New York Times",
+      "original_width": "1800px",
+      "original_height": "2700px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/80b3c2723f0f.jpg",
+      "caption": "",
+      "source": "Sapiens.org",
+      "original_width": "1280px",
+      "original_height": "853px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0974560a03bc.jpg",
+      "caption": "",
+      "source": "LinkedIn Ghana",
+      "original_width": "2016px",
+      "original_height": "1512px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/470ab854c362.jpg",
+      "caption": "",
+      "source": "Hoteles.com",
+      "original_width": "1600px",
+      "original_height": "1066px"
+    }
+  ]
+}

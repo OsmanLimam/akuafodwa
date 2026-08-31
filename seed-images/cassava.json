@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "fresh cassava roots harvested in a pile",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/997d92644a75.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "956px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/aa8e96f15248.jpg",
+      "caption": "",
+      "source": "Britannica",
+      "original_width": "1600px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fbb97773dd7f.jpg",
+      "caption": "",
+      "source": "Tia Clara's Dominican Cooking",
+      "original_width": "1800px",
+      "original_height": "1201px"
+    }
+  ]
+}

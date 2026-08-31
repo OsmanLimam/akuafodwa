@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "query": "true",
+  "count": 3,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fb6a10e9eb70.png",
+      "caption": "",
+      "source": "Prime Video",
+      "original_width": "3840px",
+      "original_height": "2160px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c33782238af3.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1035px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5c28ec5d8517.jpg",
+      "caption": "",
+      "source": "Reddit",
+      "original_width": "760px",
+      "original_height": "1140px"
+    }
+  ]
+}

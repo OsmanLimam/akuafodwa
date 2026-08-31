@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "raw cashew nuts with shells pile",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5dffd18a460e.jpg",
+      "caption": "",
+      "source": "Alamy",
+      "original_width": "1300px",
+      "original_height": "1064px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4cb8e1ea3677.jpg",
+      "caption": "",
+      "source": "– OTIS BÌNH PHƯỚC",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/929462f4e104.jpg",
+      "caption": "",
+      "source": "Fastachi",
+      "original_width": "1000px",
+      "original_height": "1000px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0e3653809c82.jpg",
+      "caption": "",
+      "source": "Bã điều Bình Phước",
+      "original_width": "1200px",
+      "original_height": "800px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/39ebd0f56e2f.jpg",
+      "caption": "",
+      "source": "Nuts.com",
+      "original_width": "5760px",
+      "original_height": "3842px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/17c7324aee62.jpg",
+      "caption": "",
+      "source": "Etsy",
+      "original_width": "1024px",
+      "original_height": "1024px"
+    }
+  ]
+}

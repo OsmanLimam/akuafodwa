@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "live pig on farm standing",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8491af41bc6b.png",
+      "caption": "",
+      "source": "World Animal Protection",
+      "original_width": "1280px",
+      "original_height": "1126px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b39e0e2b2bfe.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b6c6bc021af1.jpg",
+      "caption": "",
+      "source": "BBC",
+      "original_width": "4032px",
+      "original_height": "2268px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7de2393c2812.jpg",
+      "caption": "",
+      "source": "Business Insider",
+      "original_width": "800px",
+      "original_height": "1143px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/983956bdb389.jpg",
+      "caption": "",
+      "source": "YouTube",
+      "original_width": "1280px",
+      "original_height": "720px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c3eaf7603c0d.jpg",
+      "caption": "",
+      "source": "The New York Times",
+      "original_width": "3000px",
+      "original_height": "1688px"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "query": "fresh groundnuts in shells unshelled pile",
+  "count": 6,
+  "ranked": false,
+  "captioned_count": 0,
+  "results": [
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/b261beeaf178.jpg",
+      "caption": "",
+      "source": "Unsplash",
+      "original_width": "3000px",
+      "original_height": "2250px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c0811498bf78.jpg",
+      "caption": "",
+      "source": "Urban Nature Store",
+      "original_width": "1200px",
+      "original_height": "1200px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4e6fc4a657dd.jpg",
+      "caption": "",
+      "source": "DepositPhotos",
+      "original_width": "1600px",
+      "original_height": "1167px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/9a52597711c5.jpg",
+      "caption": "",
+      "source": "Agrocrops",
+      "original_width": "1160px",
+      "original_height": "2048px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7a3bd8f34211.png",
+      "caption": "",
+      "source": "Elk Mound Seed",
+      "original_width": "1080px",
+      "original_height": "1080px"
+    },
+    {
+      "original_url": "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cdda56f0242b.png",
+      "caption": "",
+      "source": "Bird Seed Store",
+      "original_width": "1920px",
+      "original_height": "2560px"
+    }
+  ]
+}
