@@ -4,6 +4,7 @@ This is a small Android Studio project that wraps the **live AkuafoDwa web app**
 full-screen Android shell:
 
 - AkuafoDwa icon + name on the phone's home screen, **no address bar**
+- **Branded splash screen** (logo + name + spinner) while the market loads, fades out when ready
 - Listing photos / ID document uploads work (system file picker)
 - WhatsApp share links, `tel:`, `mailto:` open in the phone's own apps
 - Pull-to-refresh, offline screen with retry
