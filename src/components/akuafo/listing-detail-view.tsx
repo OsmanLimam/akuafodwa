@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import { api } from '@/lib/api'
 import { formatGHS, timeAgo } from '@/lib/constants'
+import { categoryColor, readableText } from '@/lib/category-colors'
 import { fulfillmentLabel, sellerTypeLabel } from '@/lib/types'
 import type { ApiListing } from '@/lib/types'
 import { useApp } from './store'
@@ -233,11 +234,17 @@ export function ListingDetailView({ id }: { id: string }) {
         {/* Info */}
         <div>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full bg-[#1B5E20] px-3 py-1 text-xs font-medium text-[#FFFDF5]">
+            <span
+              className="rounded-full px-3 py-1 text-xs font-medium shadow-sm"
+              style={{
+                backgroundColor: categoryColor(listing.category.slug).color,
+                color: readableText(categoryColor(listing.category.slug).color),
+              }}
+            >
               {listing.category.name}
             </span>
             {listing.priceNegotiable && (
-              <span className="rounded-full bg-[#FBC02D]/40 dark:bg-[#2E7D32]/40 px-3 py-1 text-xs font-medium text-[#124116] dark:text-[#6FBF73]">
+              <span className="rounded-full bg-[#FBE5EA] dark:bg-[#9F1239]/30 px-3 py-1 text-xs font-medium text-[#9F1239] dark:text-[#F5A3BC]">
                 {t('price_negotiable')}
               </span>
             )}

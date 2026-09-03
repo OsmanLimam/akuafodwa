@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Search, MapPin, SlidersHorizontal, X, Sprout, ChevronLeft, ChevronRight, HandCoins, BadgeCheck, Camera, MessagesSquare } from 'lucide-react'
 import { api } from '@/lib/api'
 import { GHANA_REGIONS } from '@/lib/constants'
+import { categoryColor, readableText } from '@/lib/category-colors'
 import type { ApiListing } from '@/lib/types'
 import { useApp } from './store'
 import { ListingCard } from './listing-card'
@@ -152,10 +153,10 @@ export function BrowseView() {
                   {totalAll ?? '…'} {t('live_listings')}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#FBC02D]" /> {t('regions_covered')}
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#FF8A65]" /> {t('regions_covered')}
                 </span>
                 <span className="inline-flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#FBC02D]" /> {t('free_to_list')}
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#4DD0C4]" /> {t('free_to_list')}
                 </span>
               </div>
             </div>
@@ -191,15 +192,20 @@ export function BrowseView() {
               active={!filters.category}
               onClick={() => setFilters((f) => ({ ...f, category: '', page: 1 }))}
             />
-            {categories.map((c) => (
-              <CategoryChip
-                key={c.id}
-                label={c.name}
-                count={c._count?.listings ?? 0}
-                active={filters.category === c.slug}
-                onClick={() => setFilters((f) => ({ ...f, category: f.category === c.slug ? '' : c.slug, page: 1 }))}
-              />
-            ))}
+            {categories.map((c) => {
+              const cc = categoryColor(c.slug)
+              return (
+                <CategoryChip
+                  key={c.id}
+                  label={c.name}
+                  count={c._count?.listings ?? 0}
+                  active={filters.category === c.slug}
+                  onClick={() => setFilters((f) => ({ ...f, category: f.category === c.slug ? '' : c.slug, page: 1 }))}
+                  color={cc.color}
+                  tint={cc.tint}
+                />
+              )
+            })}
           </div>
         </div>
       </section>
@@ -508,29 +514,54 @@ function CategoryChip({
   count,
   active,
   onClick,
+  color,
+  tint,
 }: {
   label: string
   icon?: string
   count?: number
   active: boolean
   onClick: () => void
+  color?: string
+  tint?: string
 }) {
+  const solid = color ?? '#1B5E20'
   return (
     <button
       role="tab"
       aria-selected={active}
       onClick={onClick}
+      style={
+        active
+          ? { backgroundColor: solid, color: readableText(solid), borderColor: solid }
+          : undefined
+      }
       className={cn(
         'inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all outline-none focus-visible:ring-2 focus-visible:ring-ring',
-        active
-          ? 'border-[#1B5E20] bg-[#1B5E20] text-[#FFFDF5] shadow dark:border-[#4CAF50] dark:bg-[#4CAF50] dark:text-[#071A0C]'
-          : 'border-[#DDE5DE] bg-card text-[#124116] dark:border-[#2C5236] dark:text-[#D7EED9] hover:border-[#2E7D32] hover:bg-[#FBC02D]/20'
+        !active && 'border-[#DDE5DE] bg-card text-[#124116] dark:border-[#2C5236] dark:text-[#D7EED9] hover:border-[#2E7D32]'
       )}
     >
-      {icon && <span aria-hidden="true">{icon}</span>}
+      {icon ? (
+        <span aria-hidden="true">{icon}</span>
+      ) : (
+        !active && color && (
+          <span
+            aria-hidden="true"
+            className="h-2 w-2 shrink-0 rounded-full"
+            style={{ backgroundColor: color }}
+          />
+        )
+      )}
       {label}
       {count !== undefined && count > 0 && (
-        <span className={cn('rounded-full px-1.5 text-[10px] font-semibold', active ? 'bg-white/20' : 'bg-[#E8F5E9] dark:bg-[#2C5236] dark:text-[#D7EED9]')}>
+        <span
+          className="rounded-full px-1.5 text-[10px] font-semibold"
+          style={
+            active
+              ? { backgroundColor: 'rgba(255,255,255,0.28)' }
+              : { backgroundColor: tint ?? '#E8F5E9', color: color ?? '#1B5E20' }
+          }
+        >
           {count}
         </span>
       )}

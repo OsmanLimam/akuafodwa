@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { MapPin, Heart, Pin } from 'lucide-react'
 import { api } from '@/lib/api'
 import { formatGHS, timeAgo } from '@/lib/constants'
+import { categoryColor } from '@/lib/category-colors'
 import type { ApiListing } from '@/lib/types'
 import { useApp } from './store'
 import { cn } from '@/lib/utils'
@@ -73,7 +74,15 @@ export function ListingCard({
         ) : (
           <div className="flex h-full items-center justify-center text-muted-foreground">No photo</div>
         )}
-        <span className="absolute left-2.5 top-2.5 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-[#1B5E20] shadow-sm ring-1 ring-inset ring-[#1B5E20]/10 backdrop-blur-sm">
+        <span
+          className="absolute left-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-full bg-white/92 px-2.5 py-1 text-[11px] font-semibold shadow-sm ring-1 ring-inset ring-black/5 backdrop-blur-sm"
+          style={{ color: categoryColor(listing.category.slug).color }}
+        >
+          <span
+            aria-hidden="true"
+            className="h-2 w-2 rounded-full"
+            style={{ backgroundColor: categoryColor(listing.category.slug).color }}
+          />
           {listing.category.name}
         </span>
         <button
@@ -107,7 +116,7 @@ export function ListingCard({
           <span className="font-display text-lg font-bold text-[#1B5E20] dark:text-[#EDF7EE]">{formatGHS(listing.price)}</span>
           <span className="text-xs text-muted-foreground">/ {listing.unit}</span>
           {listing.priceNegotiable && (
-            <span className="ml-auto rounded-full bg-[#FBC02D]/40 dark:bg-[#2E7D32]/40 px-2 py-0.5 text-[10px] font-medium text-[#124116] dark:text-[#6FBF73]">
+            <span className="ml-auto rounded-full bg-[#FBE5EA] dark:bg-[#9F1239]/30 px-2 py-0.5 text-[10px] font-medium text-[#9F1239] dark:text-[#F5A3BC]">
               Negotiable
             </span>
           )}
