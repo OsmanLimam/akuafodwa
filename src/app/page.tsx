@@ -14,6 +14,7 @@ import { ProfileView } from '@/components/akuafo/profile-view'
 import { AdminView } from '@/components/akuafo/admin-view'
 import { AuthDialog } from '@/components/akuafo/auth-dialog'
 import { PwaRegistrar } from '@/components/akuafo/pwa'
+import { WhatsAppFab } from '@/components/akuafo/social-buttons'
 
 function ViewRouter() {
   const { route } = useApp()
@@ -46,6 +47,7 @@ function Shell() {
         <ViewRouter />
       </main>
       <Footer />
+      <WhatsAppFab />
       <AuthDialog />
     </div>
   )

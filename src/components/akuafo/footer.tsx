@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import { MapPin, ShieldCheck, Handshake } from 'lucide-react'
 import { useApp } from './store'
+import { SocialIconsRow } from './social-buttons'
 
 export function Footer() {
   const { navigate, t } = useApp()
@@ -25,6 +26,8 @@ export function Footer() {
               &ldquo;Akuafo&rdquo; means farmers, &ldquo;Dwa&rdquo; means market. Ghana&apos;s online market where
               farmers, traders and buyers meet to negotiate and deal directly.
             </p>
+            <h3 className="mt-5 text-xs font-semibold uppercase tracking-wider text-[#FFFDF5]/50">Follow the market</h3>
+            <SocialIconsRow className="mt-2.5" />
           </div>
 
           <nav aria-label="Footer">
