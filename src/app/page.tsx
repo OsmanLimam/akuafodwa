@@ -15,6 +15,7 @@ import { AdminView } from '@/components/akuafo/admin-view'
 import { AuthDialog } from '@/components/akuafo/auth-dialog'
 import { PwaRegistrar } from '@/components/akuafo/pwa'
 import { WhatsAppFab } from '@/components/akuafo/social-buttons'
+import { BottomNav } from '@/components/akuafo/bottom-nav'
 
 function ViewRouter() {
   const { route } = useApp()
@@ -43,11 +44,12 @@ function Shell() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:pb-0">
         <ViewRouter />
       </main>
       <Footer />
       <WhatsAppFab />
+      <BottomNav />
       <AuthDialog />
     </div>
   )

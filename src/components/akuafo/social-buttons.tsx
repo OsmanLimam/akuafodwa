@@ -82,7 +82,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with AkuafoDwa on WhatsApp"
-      className="group fixed z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/25 transition-transform hover:scale-105 active:scale-95 bottom-[calc(1.5rem+env(safe-area-inset-bottom))] right-4 sm:right-6"
+      className="group fixed z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/25 transition-transform hover:scale-105 active:scale-95 bottom-[calc(5.9rem+env(safe-area-inset-bottom))] md:bottom-[calc(1.5rem+env(safe-area-inset-bottom))] right-4 sm:right-6"
     >
       <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-25 animate-ping" aria-hidden="true" />
       <WhatsAppGlyph className="relative h-7 w-7" />
