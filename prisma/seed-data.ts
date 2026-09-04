@@ -16,6 +16,15 @@ function hashPassword(password: string): string {
   return `${salt}:${hash}`
 }
 
+/*
+ * SECURITY: the seeded admin password is never hardcoded. It comes from the
+ * DEMO_ADMIN_PASSWORD environment variable; when unset, a random password is
+ * generated for this seed run and printed once below. Production seeding is
+ * blocked entirely in src/lib/bootstrap.ts.
+ */
+export const SEED_ADMIN_PASSWORD =
+  process.env.DEMO_ADMIN_PASSWORD || `akuafo-admin-${randomBytes(6).toString('hex')}`
+
 function daysAgo(n: number): Date {
   return new Date(Date.now() - n * 24 * 3600 * 1000 - Math.floor(Math.random() * 20) * 3600 * 1000)
 }
@@ -93,7 +102,12 @@ const USERS: SeedUser[] = [
     bio: 'Cocoyam, garden eggs, cabbage and pawpaw from the Akuapem hills. New to AkuafoDwa.',
   },
   {
-    email: 'admin@akuafodwa.com', name: 'AkuafoDwa Admin', phone: '030 555 0000', region: 'Greater Accra', pass: 'admin1234', role: 'ADMIN',
+    // SECURITY: the admin password is never hardcoded. Seeding reads
+    // DEMO_ADMIN_PASSWORD from the environment; if unset, a random password is
+    // generated and printed once in the seeding log (local dev only —
+    // production seeding is blocked in src/lib/bootstrap.ts).
+    email: 'admin@akuafodwa.com', name: 'AkuafoDwa Admin', phone: '030 555 0000', region: 'Greater Accra',
+    pass: SEED_ADMIN_PASSWORD, role: 'ADMIN',
   },
 ]
 
@@ -517,7 +531,7 @@ export async function runSeed(db: PrismaClient | Prisma.TransactionClient) {
   console.log('Seed complete! Demo accounts:')
   console.log('  akua@akuafodwa.com / demo1234 (farmer, verified)')
   console.log('  kwame@akuafodwa.com / demo1234 (buyer)')
-  console.log('  admin@akuafodwa.com / admin1234 (admin)')
+  console.log('  admin@akuafodwa.com / ' + SEED_ADMIN_PASSWORD + ' (admin)')
 }
 
 

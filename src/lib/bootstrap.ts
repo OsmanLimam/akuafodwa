@@ -32,7 +32,13 @@ async function prepare(): Promise<void> {
   }
 
   // 2. Optional demo market, only when opted in AND the database is brand new.
-  if (process.env.SEED_DEMO === '1') {
+  // SECURITY: demo data (including its accounts) is never seeded into a
+  // production deployment — only in local development. To deliberately seed
+  // demo content into a fresh production database, set ALLOW_DEMO_SEED=1.
+  const seedAllowed =
+    process.env.SEED_DEMO === '1' &&
+    (process.env.NODE_ENV !== 'production' || process.env.ALLOW_DEMO_SEED === '1')
+  if (seedAllowed) {
     await db.$transaction(
       async (tx) => {
         // Serialize racing cold starts (two serverless instances can boot at

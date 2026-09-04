@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { SOCIAL_PROFILES, WHATSAPP_NUMBER, WHATSAPP_WELCOME } from '@/lib/social'
+import { SOCIAL_PROFILES, WHATSAPP_CHAT_ENABLED, WHATSAPP_NUMBER, WHATSAPP_WELCOME } from '@/lib/social'
 import { cn } from '@/lib/utils'
 
 /*
@@ -56,6 +56,8 @@ export function BrandGlyph({ name, className }: { name: string; className?: stri
 
 /** Green WhatsApp chat button with the AkuafoDwa welcome message pre-filled. */
 export function WhatsAppChatLink({ className, label }: { className?: string; label: string }) {
+  // Never render a chat button that would message a dead placeholder number.
+  if (!WHATSAPP_CHAT_ENABLED) return null
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_WELCOME)}`
   return (
     <a
@@ -75,6 +77,9 @@ export function WhatsAppChatLink({ className, label }: { className?: string; lab
  * every screen. Opens a chat with the market's WhatsApp line.
  */
 export function WhatsAppFab() {
+  // Hidden until a real market number is configured (see lib/social.ts) so
+  // visitors never open a chat that nobody will answer.
+  if (!WHATSAPP_CHAT_ENABLED) return null
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_WELCOME)}`
   return (
     <a
@@ -111,16 +116,18 @@ export function SocialIconsRow({ className }: { className?: string }) {
           <BrandGlyph name={s.name} className="h-4.5 w-4.5" />
         </a>
       ))}
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_WELCOME)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="AkuafoDwa WhatsApp line"
-        title="WhatsApp"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-transform hover:scale-110 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FBC02D]"
-      >
-        <WhatsAppGlyph className="h-4.5 w-4.5" />
-      </a>
+      {WHATSAPP_CHAT_ENABLED && (
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_WELCOME)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="AkuafoDwa WhatsApp line"
+          title="WhatsApp"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm transition-transform hover:scale-110 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FBC02D]"
+        >
+          <WhatsAppGlyph className="h-4.5 w-4.5" />
+        </a>
+      )}
     </div>
   )
 }

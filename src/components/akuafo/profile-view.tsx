@@ -242,6 +242,8 @@ export function ProfileView() {
             )}
           </div>
 
+          <ChangePasswordSection />
+
           <Button
             variant="outline"
             onClick={async () => {
@@ -435,5 +437,123 @@ function StatusPill({ status }: { status: string }) {
     <span className="inline-flex items-center gap-1 rounded-full border border-border bg-muted px-2.5 py-1 text-[11px] font-medium text-muted-foreground shrink-0">
       Not verified
     </span>
+  )
+}
+
+/*
+ * Change password — plain-language form that proves the current password
+ * server-side, saves the new one, and signs every OTHER device out.
+ */
+function ChangePasswordSection() {
+  const [open, setOpen] = useState(false)
+  const [current, setCurrent] = useState('')
+  const [next, setNext] = useState('')
+  const [confirm, setConfirm] = useState('')
+  const [busy, setBusy] = useState(false)
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (next.length < 8) {
+      toast.error('Your new password needs at least 8 characters.')
+      return
+    }
+    if (next !== confirm) {
+      toast.error('The two new passwords do not match. Please check them.')
+      return
+    }
+    setBusy(true)
+    try {
+      await api('/api/auth/me', {
+        method: 'PATCH',
+        body: JSON.stringify({ currentPassword: current, newPassword: next }),
+      })
+      toast.success('Password changed. Other devices have been signed out. 🔒')
+      setOpen(false)
+      setCurrent('')
+      setNext('')
+      setConfirm('')
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Could not change the password. Please try again.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="flex w-full items-center gap-2 rounded-xl border border-border bg-background/50 px-4 py-3 text-sm font-medium text-foreground/80 transition-colors hover:bg-background"
+      >
+        <Lock size={15} className="text-primary" />
+        Change my password
+      </button>
+    )
+  }
+
+  return (
+    <form onSubmit={submit} className="space-y-3 rounded-xl border border-border bg-background/50 p-4">
+      <p className="flex items-center gap-2 text-sm font-semibold">
+        <Lock size={15} className="text-primary" /> Change my password
+      </p>
+      <div>
+        <Label htmlFor="pw-current">Current password</Label>
+        <Input
+          id="pw-current"
+          type="password"
+          value={current}
+          onChange={(e) => setCurrent(e.target.value)}
+          autoComplete="current-password"
+          required
+          className="mt-1.5 bg-background"
+        />
+      </div>
+      <div>
+        <Label htmlFor="pw-new">New password (at least 8 characters)</Label>
+        <Input
+          id="pw-new"
+          type="password"
+          value={next}
+          onChange={(e) => setNext(e.target.value)}
+          autoComplete="new-password"
+          required
+          className="mt-1.5 bg-background"
+        />
+      </div>
+      <div>
+        <Label htmlFor="pw-confirm">Repeat the new password</Label>
+        <Input
+          id="pw-confirm"
+          type="password"
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
+          autoComplete="new-password"
+          required
+          className="mt-1.5 bg-background"
+        />
+      </div>
+      <div className="flex gap-2">
+        <Button type="submit" disabled={busy} className="h-10 flex-1 rounded-full bg-[#1B5E20] dark:bg-[#4CAF50] font-semibold text-[#FFFDF5] dark:text-[#071A0C] hover:bg-[#124116]">
+          {busy ? <Loader2 size={16} className="mx-auto animate-spin" /> : 'Save new password'}
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => {
+            setOpen(false)
+            setCurrent('')
+            setNext('')
+            setConfirm('')
+          }}
+          className="h-10 rounded-full"
+        >
+          Cancel
+        </Button>
+      </div>
+      <p className="text-xs text-muted-foreground">
+        After saving, every other phone or computer signed into this account will be signed out.
+      </p>
+    </form>
   )
 }

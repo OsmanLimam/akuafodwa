@@ -151,6 +151,9 @@ export function SectionHeading({
 
 export function DemoHint({ onFill }: { onFill: (email: string, pass: string) => void }) {
   const { t } = useApp()
+  // SECURITY: demo credentials must never render in a deployed build.
+  // This component only renders during local development (next dev).
+  if (process.env.NODE_ENV !== 'development') return null
   const accounts = [
     { label: t('farmer'), email: 'akua@akuafodwa.com', pass: 'demo1234' },
     { label: t('buyer'), email: 'kwame@akuafodwa.com', pass: 'demo1234' },

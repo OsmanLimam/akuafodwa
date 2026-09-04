@@ -48,10 +48,11 @@ const staticMetadata: Metadata = {
   applicationName: "AkuafoDwa",
   manifest: "/manifest.webmanifest",
   icons: {
-    // Versioned URL (?v=3) so browsers drop any previously cached favicon artwork.
-    icon: "/icons/favicon.png?v=3",
-    shortcut: "/icons/favicon.png?v=3",
-    apple: "/icons/apple-touch-icon.png?v=3",
+    // Versioned URL (?v=4) so browsers drop any previously cached favicon artwork
+    // (v3 was the old 187 KB favicon; v4 is the compressed 3 KB one).
+    icon: "/icons/favicon.png?v=4",
+    shortcut: "/icons/favicon.png?v=4",
+    apple: "/icons/apple-touch-icon.png?v=4",
   },
   appleWebApp: {
     capable: true,

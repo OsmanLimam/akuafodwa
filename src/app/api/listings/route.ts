@@ -10,7 +10,9 @@ const SELLER_SELECT = {
   id: true,
   name: true,
   createdAt: true,
-  phone: true,
+  // SECURITY: phone is deliberately excluded from public responses. Buyers
+  // receive the seller's number only after a deal is AGREED, via the
+  // authenticated thread endpoint (see api/threads/[id]).
   sellerType: true,
   businessName: true,
   identityStatus: true,

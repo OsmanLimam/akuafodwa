@@ -19,7 +19,17 @@ export async function GET(req: NextRequest) {
           }
         : {},
       orderBy: { createdAt: 'desc' },
-      include: { _count: { select: { listings: true } } },
+      // SECURITY: explicit select — never serialize password hashes or ID
+      // document references to the browser.
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        role: true,
+        identityStatus: true,
+        createdAt: true,
+        _count: { select: { listings: true } },
+      },
     })
     return NextResponse.json({ users })
   } catch (e) {
