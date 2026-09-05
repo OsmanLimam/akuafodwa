@@ -62,3 +62,6 @@ server.log
 /tool-results/
 /agent-ctx/
 worklog.md
+
+# Private verification documents must never be tracked in git
+/private-verification-docs/
