@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
   if (user.role === 'ADMIN') {
     return NextResponse.json({ error: 'Admin accounts do not need verification.' }, { status: 400 })
   }
-  const rl = rateLimit(`verify-submit:${user.id}`, 3, 24 * 60 * 60 * 1000)
+  const rl = await rateLimit(`verify-submit:${user.id}`, 3, 24 * 60 * 60 * 1000)
   if (!rl.ok) {
     return NextResponse.json(
       { error: 'You have submitted several requests today. Please try again tomorrow.' },

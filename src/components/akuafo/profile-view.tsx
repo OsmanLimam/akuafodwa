@@ -153,7 +153,7 @@ export function ProfileView() {
                   placeholder="e.g. 024 000 0000"
                   className="mt-1.5 bg-background"
                 />
-                <p className="mt-1.5 text-xs text-muted-foreground">
+                <p className="mt-1.5 text-sm text-muted-foreground">
                   Shown to your deal partner only after a deal is agreed.
                 </p>
               </div>
@@ -313,7 +313,7 @@ function IdentityVerificationSection({
           <h3 className="font-semibold text-[#1B5E20] dark:text-[#EDF7EE] flex items-center gap-2">
             <IdCard size={17} className="text-[#2E7D32] dark:text-[#6FBF73]" /> Identity verification
           </h3>
-          <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
             Verified sellers get more responses: buyers can see the &ldquo;Identity verified&rdquo; badge on
             your listings and profile.
           </p>

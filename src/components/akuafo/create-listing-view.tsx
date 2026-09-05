@@ -195,10 +195,12 @@ export function CreateListingView() {
                       e.stopPropagation()
                       setImages((prev) => prev.filter((u) => u !== url))
                     }}
-                    className="absolute right-1 top-1 rounded-md bg-[#124116]/70 p-1 text-white opacity-0 transition-opacity hover:bg-red-700 group-hover:opacity-100"
+                    className="absolute right-0 top-0 flex h-11 w-11 items-start justify-end opacity-0 transition-opacity outline-none focus-visible:opacity-100 group-hover:opacity-100"
                     aria-label="Remove photo"
                   >
-                    <Trash2 size={11} />
+                    <span className="m-1 rounded-md bg-[#124116]/70 p-1 text-white transition-colors hover:bg-red-700">
+                      <Trash2 size={11} />
+                    </span>
                   </button>
                 </div>
               ))}

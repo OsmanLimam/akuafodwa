@@ -97,6 +97,43 @@ const en = {
   type_message: 'Type a message…',
   send: 'Send',
 
+  // Reporting a listing (audit item C2)
+  report_listing: 'Report this listing',
+  report_dialog_intro:
+    'Tell us what is wrong with this listing. Every report goes to our review team and stays confidential.',
+  report_reason_spam: 'Spam or posted in the wrong category',
+  report_reason_fake: 'Fake listing or wrong photos',
+  report_reason_scam: 'Asks for money outside the market',
+  report_reason_wrong_price: 'Misleading price',
+  report_reason_already_sold: 'Already sold elsewhere',
+  report_reason_offensive: 'Offensive content',
+  report_reason_other: 'Something else',
+  report_details_label: 'Add details (optional)',
+  report_details_placeholder: 'Anything that helps our team, e.g. what the seller asked you to do…',
+  report_submit: 'Send report',
+  report_sending: 'Sending…',
+  report_success: 'Thank you. Our team will review this listing.',
+  report_error_401: 'Please sign in first to report a listing.',
+  report_error_generic: 'Could not send the report. Please try again.',
+  report_close: 'Close',
+
+  // Editing a listing (seller "My listings" full edit dialog)
+  edit_listing: 'Edit listing',
+  edit_listing_intro:
+    'Update your listing details. Buyers see your changes right away.',
+  field_title: 'Title',
+  field_price: 'Asking price (GH₵ per unit)',
+  field_unit: 'Unit',
+  field_grade: 'Quality / grade',
+  field_packaging: 'Packaging',
+  field_harvest: 'Harvest info',
+  field_production: 'Production method',
+  field_fulfillment: 'Fulfilment',
+  optional: 'optional',
+  save_changes: 'Save changes',
+  saving: 'Saving…',
+  edit_success: 'Listing updated.',
+
   // Common
   welcome: 'Welcome',
   thank_you: 'Thank you',
@@ -189,6 +226,45 @@ const tw: Partial<Record<StringKey, string>> = {
   thank_you: 'Meda wo ase', // #64
   loading: 'Rekɔ so...', // #65
   no_listings_found: 'Yɛannhu biribiara', // #66
+
+  // Reporting a listing (C2). Not yet in the owner's approved list — plausible
+  // Akan phrasing reusing existing vocabulary (nneɛma, dwa, boɔ, mfonini,
+  // baabi foforɔ, toro); safe for the owner to refine later.
+  report_listing: 'Bɔ amane fa nneɛma yi ho',
+  report_dialog_intro: 'Ka deɛ ɛnyɛ yie ho asɛm. Yɛhwɛ amane biara mu, na ɛda wo ne yɛn ntam.',
+  report_reason_spam: 'Spam, anaasɛ ɛda beaɛ a ɛnsɛ',
+  report_reason_fake: 'Nneɛma a ɛyɛ toro anaasɛ mfonini a ɛmfata',
+  report_reason_scam: 'Ɔpɛ sika a wobetua wɔ dwa no akyi',
+  report_reason_wrong_price: 'Boɔ no nyɛ nokorɛ',
+  report_reason_already_sold: 'Wɔatɔn dedaw wɔ baabi foforɔ',
+  report_reason_offensive: 'Nsɛm anaasɛ mfonini a ɛyɛ tan',
+  report_reason_other: 'Adeɛ foforɔ',
+  report_details_label: 'Ka bio (sɛ wopɛ)',
+  report_details_placeholder: 'Twerɛ biribi a ɛbɛboa, sɛ nhwɛsoɔ: deɛ ɔtɔnfoɔ no bisaa wo…',
+  report_submit: 'Fa amane no kɔ',
+  report_sending: 'Rekɔ so…',
+  report_success: 'Meda wo ase. Yɛbɛhwɛ nneɛma yi mu.',
+  report_error_401: 'Kɔ mu kanea na wobɛtumi abɔ amane.',
+  report_error_generic: 'Amane no ankɔ. Yɛsrɛ wo, bɔ mmɔden bio.',
+  report_close: 'To mu',
+
+  // Editing a listing. Not yet in the owner's approved list — plausible Akan
+  // phrasing reusing existing vocabulary (nneɛma, dwa, boɔ, kora, sesa);
+  // safe for the owner to refine later.
+  edit_listing: 'Sesa nneɛma a wode ato dwa so',
+  edit_listing_intro: 'Sesa wo nneɛma ho nsɛm. Ɔtɔfoɔ bɛhu nsakraeɛ no ntɛm ara.',
+  field_title: 'Din',
+  field_price: 'Boɔ a worepɛ (GH₵ ma baabi biara)',
+  field_unit: 'Sɛnea wɔtɔn no',
+  field_grade: 'Nneɛma no gyinapɛn',
+  field_packaging: 'Nneɛma a wɔde ata mu',
+  field_harvest: 'Nsɛm fa bere a wɔtwaa no ho',
+  field_production: 'Sɛnea wɔyɛɛ no',
+  field_fulfillment: 'Sɛnea ɔtɔfoɔ bɛnya no',
+  optional: 'sɛ wopɛ',
+  save_changes: 'Kora nsiesie no',
+  saving: 'Rekora…',
+  edit_success: 'Nsiesie no akɔ so.',
 }
 
 export function translate(lang: Lang, key: StringKey): string {

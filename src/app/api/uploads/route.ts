@@ -9,11 +9,27 @@ const MAX_SIZE = 4 * 1024 * 1024 // 4MB
 // Listing photos are stored IN the database (StoredFile) and served back
 // through /api/files/[id]. No writable disk needed — works on Vercel.
 export async function POST(req: NextRequest) {
+  // CSRF guard for multipart POSTs (simple requests skip CORS preflight):
+  // if the browser sent an Origin, it must match our own host — mirroring the
+  // x-forwarded-host/proto handling pattern in requestIsHttps (lib/auth.ts).
+  const origin = req.headers.get('origin')
+  if (origin) {
+    const host = (req.headers.get('x-forwarded-host') ?? req.headers.get('host') ?? '').split(',')[0].trim().toLowerCase()
+    let originHost = ''
+    try {
+      originHost = new URL(origin).host.toLowerCase()
+    } catch {
+      originHost = ''
+    }
+    if (!host || originHost !== host) {
+      return NextResponse.json({ error: 'Invalid request origin.' }, { status: 403 })
+    }
+  }
   const user = await getSessionUser()
   if (!user) {
     return NextResponse.json({ error: 'Please sign in first.' }, { status: 401 })
   }
-  const rl = rateLimit(`uploads:${user.id}`, 40, 60 * 60 * 1000)
+  const rl = await rateLimit(`upload:${user.id}`, 30, 60 * 60 * 1000)
   if (!rl.ok) {
     return NextResponse.json(
       { error: 'Upload limit reached for this hour. Please try again later.' },

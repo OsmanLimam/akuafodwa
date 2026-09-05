@@ -107,7 +107,7 @@ export async function PATCH(req: NextRequest, ctx: { params: Promise<{ id: strin
     if (!isOwner && !isAdmin) {
       return NextResponse.json({ error: 'You can only edit your own listings.' }, { status: 403 })
     }
-    const rl = rateLimit(`listing-update:${user.id}`, 30, 60 * 60 * 1000)
+    const rl = await rateLimit(`listing-update:${user.id}`, 30, 60 * 60 * 1000)
     if (!rl.ok) {
       return NextResponse.json({ error: 'Too many updates. Please try again later.' }, { status: 429 })
     }

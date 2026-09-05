@@ -16,6 +16,7 @@ import {
   ShieldQuestion,
   Pin,
   Link2,
+  Flag,
 } from 'lucide-react'
 import { api } from '@/lib/api'
 import { formatGHS, timeAgo } from '@/lib/constants'
@@ -26,6 +27,7 @@ import { useApp } from './store'
 import { ListingCard } from './listing-card'
 import { BrandGlyph } from './social-buttons'
 import { AvatarInitials, ListingCardSkeleton, SectionHeading, Stars } from './misc'
+import { ReportDialog } from './report-dialog'
 import { Button } from '@/components/ui/button'
 import {
   Dialog,
@@ -42,6 +44,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { toast } from 'sonner'
@@ -56,6 +59,7 @@ export function ListingDetailView({ id }: { id: string }) {
   const [activeImage, setActiveImage] = useState(0)
   const [isFavorite, setIsFavorite] = useState(false)
   const [offerOpen, setOfferOpen] = useState(false)
+  const [reportOpen, setReportOpen] = useState(false)
 
   useEffect(() => {
     let cancelled = false
@@ -102,9 +106,38 @@ export function ListingDetailView({ id }: { id: string }) {
     void doToggleFavorite()
   }
 
+  if (loading) {
+    return (
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="aspect-[4/3] rounded-3xl bg-muted animate-pulse" />
+          <div className="space-y-4">
+            <div className="h-10 w-3/4 bg-muted rounded animate-pulse" />
+            <div className="h-6 w-1/3 bg-muted rounded animate-pulse" />
+            <div className="h-32 w-full bg-muted rounded animate-pulse" />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error || !listing) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-20 text-center">
+        <h1 className="font-display text-3xl font-bold text-primary">Listing not found</h1>
+        <p className="mt-2 text-muted-foreground">{error ?? 'This listing may have been removed.'}</p>
+        <Button onClick={() => navigate('/')} className="mt-6 rounded-full bg-[#1B5E20] text-[#FFFDF5] hover:bg-[#124116]">
+          <ArrowLeft size={16} className="mr-2" /> {t('back_to_market')}
+        </Button>
+      </div>
+    )
+  }
+
   // ---- WhatsApp share cards ----
   // Crawlable link (/\?listing=<id>): WhatsApp unfurls it with the real photo,
   // title and cedi price via the server-emitted Open Graph tags.
+  // Defined after the loading/error guards so `listing` is narrowed to a
+  // non-null ApiListing inside these helpers.
   const buildShareUrl = () => `${window.location.origin}/?listing=${id}`
   const buildShareText = () => {
     const where = listing.city ? `${listing.city}, ${listing.region}` : listing.region
@@ -140,33 +173,6 @@ export function ListingDetailView({ id }: { id: string }) {
       }
     }
     await copyShareLink()
-  }
-
-  if (loading) {
-    return (
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="aspect-[4/3] rounded-3xl bg-muted animate-pulse" />
-          <div className="space-y-4">
-            <div className="h-10 w-3/4 bg-muted rounded animate-pulse" />
-            <div className="h-6 w-1/3 bg-muted rounded animate-pulse" />
-            <div className="h-32 w-full bg-muted rounded animate-pulse" />
-          </div>
-        </div>
-      </div>
-    )
-  }
-
-  if (error || !listing) {
-    return (
-      <div className="mx-auto max-w-3xl px-4 py-20 text-center">
-        <h1 className="font-display text-3xl font-bold text-primary">Listing not found</h1>
-        <p className="mt-2 text-muted-foreground">{error ?? 'This listing may have been removed.'}</p>
-        <Button onClick={() => navigate('/')} className="mt-6 rounded-full bg-[#1B5E20] text-[#FFFDF5] hover:bg-[#124116]">
-          <ArrowLeft size={16} className="mr-2" /> {t('back_to_market')}
-        </Button>
-      </div>
-    )
   }
 
   const sold = listing.status === 'SOLD'
@@ -340,7 +346,7 @@ export function ListingDetailView({ id }: { id: string }) {
               </span>
             </div>
             {listing.seller.identityStatus === 'UNVERIFIED' && (
-              <p className="mt-2.5 flex items-start gap-1.5 border-t border-border pt-2.5 text-[11px] leading-relaxed text-muted-foreground">
+              <p className="mt-2.5 flex items-start gap-1.5 border-t border-border pt-2.5 text-sm leading-relaxed text-muted-foreground">
                 <ShieldQuestion size={13} className="mt-0.5 shrink-0 text-[#2E7D32] dark:text-[#6FBF73]" />
                 This seller has not completed identity verification yet. Arrange to inspect the goods before you pay.
               </p>
@@ -415,6 +421,20 @@ export function ListingDetailView({ id }: { id: string }) {
                   <DropdownMenuItem onClick={copyShareLink} className="gap-2.5 py-2.5">
                     <Link2 size={15} /> Copy link
                   </DropdownMenuItem>
+                  {/* C2: report entry — signed-in buyers only (owners never see
+                      this menu; the offer block replaces it for them). */}
+                  {user && (
+                    <>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem
+                        onClick={() => setReportOpen(true)}
+                        className="gap-2.5 py-2.5 text-[#B3261E] focus:text-[#B3261E] dark:text-[#E4574E] dark:focus:text-[#E4574E]"
+                      >
+                        <Flag size={15} />
+                        {t('report_listing')}
+                      </DropdownMenuItem>
+                    </>
+                  )}
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -455,6 +475,8 @@ export function ListingDetailView({ id }: { id: string }) {
           navigate(`/inbox/${threadId}`)
         }}
       />
+
+      <ReportDialog open={reportOpen} onOpenChange={setReportOpen} listingId={id} />
     </div>
   )
 }

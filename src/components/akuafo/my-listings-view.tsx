@@ -20,22 +20,14 @@ import { formatGHS, timeAgo } from '@/lib/constants'
 import type { ApiListing } from '@/lib/types'
 import { useApp } from './store'
 import { EmptyState, SectionHeading, StatusBadge } from './misc'
+import { EditListingDialog } from './edit-listing-dialog'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -51,7 +43,7 @@ import { toast } from 'sonner'
 import { cn } from '@/lib/utils'
 
 export function MyListingsView() {
-  const { user, userLoading, navigate } = useApp()
+  const { user, userLoading, navigate, t } = useApp()
   const [listings, setListings] = useState<ApiListing[]>([])
   const [loading, setLoading] = useState(true)
   const [tab, setTab] = useState<'ALL' | 'ACTIVE' | 'SOLD'>('ALL')
@@ -241,7 +233,7 @@ export function MyListingsView() {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="rounded-xl w-48">
                     <DropdownMenuItem onClick={() => setEditListing(l)}>
-                      <Pencil size={14} className="mr-2" /> Edit price &amp; quantity
+                      <Pencil size={14} className="mr-2" /> {t('edit_listing')}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setStatus(l, l.status === 'SOLD' ? 'ACTIVE' : 'SOLD')}>
                       {l.status === 'SOLD' ? (
@@ -265,14 +257,19 @@ export function MyListingsView() {
         </div>
       )}
 
-      {/* Edit dialog */}
+      {/* Edit dialog (full edit: everything except category & photos) */}
       {editListing && (
         <EditListingDialog
           listing={editListing}
           onClose={() => setEditListing(null)}
-          onSaved={() => {
+          onSaved={(updated) => {
             setEditListing(null)
-            load()
+            // Apply the server-returned listing right away — no stale UI.
+            // The PATCH response omits the seller relation, so spreading the
+            // previous row first keeps it while refreshing every edited field.
+            setListings((prev) =>
+              prev.map((l) => (l.id === updated.id ? { ...l, ...updated } : l))
+            )
           }}
         />
       )}
@@ -329,63 +326,5 @@ function StatCard({
         <p className="font-display text-xl font-bold text-[#1B5E20] dark:text-[#EDF7EE]">{value}</p>
       </div>
     </button>
-  )
-}
-
-function EditListingDialog({
-  listing,
-  onClose,
-  onSaved,
-}: {
-  listing: ApiListing
-  onClose: () => void
-  onSaved: () => void
-}) {
-  const [price, setPrice] = useState(String(listing.price))
-  const [quantity, setQuantity] = useState(String(listing.quantity))
-  const [busy, setBusy] = useState(false)
-
-  const save = async () => {
-    setBusy(true)
-    try {
-      await api(`/api/listings/${listing.id}`, {
-        method: 'PATCH',
-        json: { price: parseFloat(price), quantity: parseFloat(quantity) },
-      })
-      toast.success('Listing updated.')
-      onSaved()
-    } catch (e) {
-      toast.error(e instanceof Error ? e.message : 'Failed to update.')
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  return (
-    <Dialog open onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="rounded-3xl sm:max-w-sm">
-        <DialogHeader>
-          <DialogTitle className="font-display text-xl text-[#1B5E20] dark:text-[#EDF7EE]">Edit listing</DialogTitle>
-        </DialogHeader>
-        <div className="space-y-4">
-          <div>
-            <Label>Asking price (GH₵ / {listing.unit})</Label>
-            <Input type="number" min="0" step="any" value={price} onChange={(e) => setPrice(e.target.value)} className="mt-1.5 bg-background" />
-          </div>
-          <div>
-            <Label>Quantity available ({listing.unit})</Label>
-            <Input type="number" min="0" step="any" value={quantity} onChange={(e) => setQuantity(e.target.value)} className="mt-1.5 bg-background" />
-          </div>
-        </div>
-        <DialogFooter>
-          <Button variant="outline" onClick={onClose} className="rounded-full border-[#FBC02D] text-[#124116] dark:text-[#6FBF73]">
-            Cancel
-          </Button>
-          <Button onClick={save} disabled={busy} className="rounded-full bg-[#1B5E20] dark:bg-[#4CAF50] text-[#FFFDF5] dark:text-[#071A0C] hover:bg-[#124116] dark:hover:bg-[#FFFDF5]">
-            {busy ? 'Saving…' : 'Save changes'}
-          </Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
   )
 }

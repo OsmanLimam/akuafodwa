@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { MapPin, Heart, Pin } from 'lucide-react'
 import { api } from '@/lib/api'
@@ -18,7 +18,7 @@ export function ListingCard({
   listing: ApiListing
   onFavoriteChange?: (listingId: string, isFavorite: boolean) => void
 }) {
-  const { navigate, user, requireAuth } = useApp()
+  const { user, requireAuth } = useApp()
   const [isFavorite, setIsFavorite] = useState(Boolean(listing.isFavorite))
   const [favBusy, setFavBusy] = useState(false)
   const cover = listing.images[0]?.url
@@ -41,8 +41,7 @@ export function ListingCard({
     }
   }
 
-  const toggleFavorite = (e: React.MouseEvent) => {
-    e.stopPropagation()
+  const toggleFavorite = () => {
     if (!user) {
       // After sign-in this card's save action resumes automatically.
       requireAuth(undefined, () => void doToggleFavorite())
@@ -53,15 +52,11 @@ export function ListingCard({
   }
 
   return (
-    <article
-      role="link"
-      tabIndex={0}
-      onClick={() => navigate(`/listing/${listing.id}`)}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter') navigate(`/listing/${listing.id}`)
-      }}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-ring outline-none"
-    >
+    <article className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 focus-within:ring-2 focus-within:ring-ring">
+      {/* Clickable area: a real link wrapping media + text. Action buttons live
+          OUTSIDE this anchor as positioned siblings (interactive content must
+          never be nested inside a link). */}
+      <a href={`#/listing/${listing.id}`} className="block cursor-pointer outline-none">
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         {cover ? (
           <Image
@@ -85,16 +80,6 @@ export function ListingCard({
           />
           {listing.category.name}
         </span>
-        <button
-          onClick={toggleFavorite}
-          aria-label={isFavorite ? 'Remove from saved' : 'Save listing'}
-          className={cn(
-            'absolute right-2.5 top-2.5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur transition-all hover:scale-110 outline-none focus-visible:ring-2 focus-visible:ring-ring',
-            isFavorite ? 'text-[#B3261E]' : 'text-[#124116] dark:text-[#6FBF73]'
-          )}
-        >
-          <Heart size={17} className={cn(isFavorite && 'fill-current')} />
-        </button>
         {listing.isPremium && !sold && (
           <span className="absolute bottom-2.5 left-2.5 inline-flex items-center gap-1 rounded-full bg-[#FBC02D] px-2.5 py-1 text-[11px] font-semibold text-[#1F2937] shadow-md">
             <Pin size={12} className="rotate-45" aria-hidden="true" />
@@ -132,6 +117,18 @@ export function ListingCard({
           <span className="shrink-0">{timeAgo(listing.createdAt)}</span>
         </div>
       </div>
+      </a>
+      {/* Favorite is a sibling of the link, layered above the card */}
+      <button
+        onClick={toggleFavorite}
+        aria-label={isFavorite ? 'Remove from saved' : 'Save listing'}
+        className={cn(
+          'absolute right-2.5 top-2.5 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow backdrop-blur transition-all hover:scale-110 outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          isFavorite ? 'text-[#B3261E]' : 'text-[#124116] dark:text-[#6FBF73]'
+        )}
+      >
+        <Heart size={17} className={cn(isFavorite && 'fill-current')} />
+      </button>
     </article>
   )
 }

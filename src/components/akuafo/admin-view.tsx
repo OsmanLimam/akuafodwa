@@ -14,6 +14,8 @@ import {
   Trash2,
   IdCard,
   ExternalLink,
+  KeyRound,
+  Copy,
   Pin,
 } from 'lucide-react'
 import { api } from '@/lib/api'
@@ -23,9 +25,18 @@ import { sellerTypeLabel } from '@/lib/types'
 import type { ApiListing } from '@/lib/types'
 import { useApp } from './store'
 import { EmptyState, SectionHeading, StatusBadge } from './misc'
+import { reportReasonLabel } from './report-dialog'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
 import {
   Table,
   TableBody,
@@ -82,6 +93,32 @@ interface VerificationUser {
   _count: { listings: number }
 }
 
+interface AdminReport {
+  id: string
+  listingId: string
+  reason: string
+  details: string | null
+  status: string
+  createdAt: string
+  listing: { id: string; title: string; status: string; sellerId: string }
+  reporter: { id: string; name: string; email: string }
+}
+
+const REPORT_STATUS_STYLES: Record<string, { cls: string; label: string }> = {
+  OPEN: {
+    cls: 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-300',
+    label: 'Open',
+  },
+  DISMISSED: {
+    cls: 'border-neutral-200 bg-neutral-100 text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900/60 dark:text-neutral-300',
+    label: 'Dismissed',
+  },
+  ACTIONED: {
+    cls: 'border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-300',
+    label: 'Actioned',
+  },
+}
+
 const DOC_LABELS: Record<string, string> = {
   GHANA_CARD: 'Ghana Card',
   PASSPORT: 'Passport',
@@ -92,20 +129,34 @@ const DOC_LABELS: Record<string, string> = {
 export function AdminView() {
   const { user, userLoading, navigate } = useApp()
   const [stats, setStats] = useState<AdminStats | null>(null)
-  const [tab, setTab] = useState<'listings' | 'users' | 'verifications'>('listings')
+  const [tab, setTab] = useState<'listings' | 'users' | 'verifications' | 'reports'>('listings')
   const [listings, setListings] = useState<ApiListing[]>([])
   const [users, setUsers] = useState<AdminUser[]>([])
   const [verifications, setVerifications] = useState<VerificationUser[]>([])
+  const [reports, setReports] = useState<AdminReport[]>([])
   const [q, setQ] = useState('')
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'ACTIVE' | 'SOLD' | 'TAKEN_DOWN'>('ALL')
   const [deleteTarget, setDeleteTarget] = useState<ApiListing | null>(null)
   const [reviewTarget, setReviewTarget] = useState<VerificationUser | null>(null)
   const [reviewNote, setReviewNote] = useState('')
+  const [takedownTarget, setTakedownTarget] = useState<AdminReport | null>(null)
+  const [busyReportId, setBusyReportId] = useState<string | null>(null)
+  // C7 stopgap: admin-issued password reset (no email infrastructure).
+  const [resetTarget, setResetTarget] = useState<AdminUser | null>(null)
+  const [resetBusyId, setResetBusyId] = useState<string | null>(null)
+  // Shown once, exactly when the server answers — the only time the temp
+  // password is ever revealed.
+  const [resetResult, setResetResult] = useState<{ name: string; tempPassword: string } | null>(null)
 
   const isAdmin = user?.role === 'ADMIN'
 
   const reload = useCallback(() => {
     api<{ stats: AdminStats }>('/api/admin/stats').then((d) => setStats(d.stats)).catch(() => {})
+    // Reports are small (max 200 rows) and feed the tab badge, so they load
+    // on every refresh regardless of the active tab.
+    api<{ reports: AdminReport[] }>('/api/admin/reports')
+      .then((d) => setReports(d.reports))
+      .catch(() => {})
     if (tab === 'listings') {
       const sp = new URLSearchParams()
       if (q) sp.set('q', q)
@@ -132,6 +183,9 @@ export function AdminView() {
     const t = setTimeout(() => {
       api<{ stats: AdminStats }>('/api/admin/stats')
         .then((d) => setStats(d.stats))
+        .catch(() => {})
+      api<{ reports: AdminReport[] }>('/api/admin/reports')
+        .then((d) => setReports(d.reports))
         .catch(() => {})
       if (tab === 'listings') {
         const sp = new URLSearchParams()
@@ -220,6 +274,49 @@ export function AdminView() {
     }
   }
 
+  const actOnReport = async (report: AdminReport, action: 'DISMISS' | 'TAKE_DOWN') => {
+    setBusyReportId(report.id)
+    try {
+      await api(`/api/admin/reports/${report.id}`, {
+        method: 'PATCH',
+        json: { action },
+      })
+      toast.success(action === 'DISMISS' ? 'Report dismissed.' : 'Listing taken down.')
+      setTakedownTarget(null)
+      reload()
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : 'Action failed.')
+    } finally {
+      setBusyReportId(null)
+    }
+  }
+
+  const resetPassword = async (target: AdminUser) => {
+    setResetBusyId(target.id)
+    try {
+      const { tempPassword } = await api<{ tempPassword: string }>(
+        `/api/admin/users/${target.id}/reset-password`,
+        { method: 'POST' },
+      )
+      setResetTarget(null)
+      setResetResult({ name: target.name, tempPassword })
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : 'Reset failed.')
+    } finally {
+      setResetBusyId(null)
+    }
+  }
+
+  const copyTempPassword = async () => {
+    if (!resetResult) return
+    try {
+      await navigator.clipboard.writeText(resetResult.tempPassword)
+      toast.success('Password copied.')
+    } catch {
+      toast.error('Copy failed. Please select the password and copy it manually.')
+    }
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 py-10">
       <SectionHeading
@@ -252,6 +349,14 @@ export function AdminView() {
               {verifications.some((v) => v.identityStatus === 'PENDING') && (
                 <span className="ml-1.5 inline-flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-amber-500 px-1 text-[10px] font-bold text-white">
                   {verifications.filter((v) => v.identityStatus === 'PENDING').length}
+                </span>
+              )}
+            </TabsTrigger>
+            <TabsTrigger value="reports" className="rounded-full data-[state=active]:bg-[#1B5E20] data-[state=active]:text-[#FFFDF5]">
+              Reports
+              {reports.some((r) => r.status === 'OPEN') && (
+                <span className="ml-1.5 inline-flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-amber-500 px-1 text-[10px] font-bold text-white">
+                  {reports.filter((r) => r.status === 'OPEN').length}
                 </span>
               )}
             </TabsTrigger>
@@ -372,6 +477,7 @@ export function AdminView() {
                   <TableHead>Role</TableHead>
                   <TableHead>Listings</TableHead>
                   <TableHead>Joined</TableHead>
+                  <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -382,6 +488,22 @@ export function AdminView() {
                     <TableCell className="text-sm">{u.role}</TableCell>
                     <TableCell className="text-sm">{u._count.listings}</TableCell>
                     <TableCell className="whitespace-nowrap text-xs text-muted-foreground">{new Date(u.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</TableCell>
+                    <TableCell className="text-right">
+                      {u.role === 'ADMIN' ? (
+                        <span className="text-xs text-muted-foreground">—</span>
+                      ) : (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          disabled={resetBusyId === u.id}
+                          className="h-8 rounded-full"
+                          onClick={() => setResetTarget(u)}
+                          aria-label={`Reset password for ${u.name}`}
+                        >
+                          <KeyRound size={14} className="mr-1" /> Reset password
+                        </Button>
+                      )}
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -390,7 +512,7 @@ export function AdminView() {
               <div className="p-6"><EmptyState title="No users found" /></div>
             )}
           </div>
-        ) : (
+        ) : tab === 'verifications' ? (
           <div className="nice-scroll max-h-[62vh] overflow-auto">
             {verifications.length === 0 ? (
               <div className="p-6">
@@ -477,6 +599,104 @@ export function AdminView() {
               </Table>
             )}
           </div>
+        ) : (
+          <div className="nice-scroll max-h-[62vh] overflow-auto">
+            {reports.length === 0 ? (
+              <div className="p-6">
+                <EmptyState
+                  title="No reports yet"
+                  subtitle="When buyers report a suspicious listing, it appears here for review."
+                />
+              </div>
+            ) : (
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-background/50 hover:bg-background/50">
+                    <TableHead>Reason</TableHead>
+                    <TableHead>Listing</TableHead>
+                    <TableHead>Reported by</TableHead>
+                    <TableHead>When</TableHead>
+                    <TableHead>Report</TableHead>
+                    <TableHead className="text-right">Actions</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {reports.map((r) => {
+                    const st = REPORT_STATUS_STYLES[r.status] ?? {
+                      cls: 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950/40 dark:text-amber-300',
+                      label: r.status,
+                    }
+                    return (
+                      <TableRow key={r.id}>
+                        <TableCell className="max-w-56">
+                          <p className="font-medium">{reportReasonLabel(r.reason)}</p>
+                          {r.details && (
+                            <p className="mt-0.5 truncate text-xs text-muted-foreground" title={r.details}>
+                              {r.details}
+                            </p>
+                          )}
+                        </TableCell>
+                        <TableCell className="max-w-56">
+                          <button
+                            onClick={() => navigate(`/listing/${r.listing.id}`)}
+                            className="block max-w-full truncate text-left font-medium hover:text-[#2E7D32] dark:hover:text-[#6FBF73]"
+                          >
+                            {r.listing.title}
+                          </button>
+                          <span className="mt-0.5 inline-block">
+                            <StatusBadge status={r.listing.status} />
+                          </span>
+                        </TableCell>
+                        <TableCell>
+                          <p className="text-sm font-medium">{r.reporter.name}</p>
+                          <p className="text-xs text-muted-foreground">{r.reporter.email}</p>
+                        </TableCell>
+                        <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                          {timeAgo(r.createdAt)}
+                        </TableCell>
+                        <TableCell>
+                          <span
+                            className={cn(
+                              'inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-semibold',
+                              st.cls
+                            )}
+                          >
+                            {st.label}
+                          </span>
+                        </TableCell>
+                        <TableCell className="text-right">
+                          {r.status === 'OPEN' ? (
+                            <div className="flex justify-end gap-1.5">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                disabled={busyReportId === r.id}
+                                className="h-8 rounded-full border-amber-200 text-amber-700 hover:bg-amber-50 dark:border-amber-900 dark:text-amber-300 dark:hover:bg-amber-950/40"
+                                onClick={() => setTakedownTarget(r)}
+                              >
+                                <Ban size={14} className="mr-1" /> Take down listing
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                disabled={busyReportId === r.id}
+                                className="h-8 rounded-full"
+                                onClick={() => actOnReport(r, 'DISMISS')}
+                              >
+                                Dismiss
+                              </Button>
+                            </div>
+                          ) : (
+                            <span className="text-xs text-muted-foreground">—</span>
+                          )}
+                        </TableCell>
+                      </TableRow>
+                    )
+                  })}
+                </TableBody>
+              </Table>
+            )}
+          </div>
         )}
       </div>
 
@@ -546,6 +766,90 @@ export function AdminView() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+
+      <AlertDialog open={Boolean(takedownTarget)} onOpenChange={(v) => !v && setTakedownTarget(null)}>
+        <AlertDialogContent className="rounded-3xl">
+          <AlertDialogHeader>
+            <AlertDialogTitle>Take down “{takedownTarget?.listing.title}”?</AlertDialogTitle>
+            <AlertDialogDescription>
+              The listing is hidden from the market and marked as removed by AkuafoDwa admins. If the report
+              looks unfounded, dismiss it instead.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="rounded-full">Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => takedownTarget && actOnReport(takedownTarget, 'TAKE_DOWN')}
+              className="rounded-full bg-red-700 hover:bg-red-800"
+            >
+              Take down listing
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      {/* Reset password confirm (C7 stopgap — admin targets are blocked by the API) */}
+      <AlertDialog open={Boolean(resetTarget)} onOpenChange={(v) => !v && setResetTarget(null)}>
+        <AlertDialogContent className="rounded-3xl">
+          <AlertDialogHeader>
+            <AlertDialogTitle>Reset {resetTarget?.name}&rsquo;s password?</AlertDialogTitle>
+            <AlertDialogDescription>
+              AkuafoDwa creates a temporary password for you to hand over in person.{' '}
+              {resetTarget?.name} will be signed out on every device until they sign in with the new
+              password, and their old password stops working immediately.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel className="rounded-full">Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={() => resetTarget && resetPassword(resetTarget)}
+              disabled={resetBusyId === resetTarget?.id}
+              className="rounded-full bg-[#1B5E20] text-[#FFFDF5] hover:bg-[#124116] dark:bg-[#4CAF50] dark:text-[#071A0C] dark:hover:bg-[#FFFDF5]"
+            >
+              <KeyRound size={14} className="mr-1.5" /> Reset password
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
+      {/* One-time temp password reveal */}
+      <Dialog open={Boolean(resetResult)} onOpenChange={(v) => !v && setResetResult(null)}>
+        <DialogContent className="rounded-3xl sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2 font-display text-xl text-[#1B5E20] dark:text-[#EDF7EE]">
+              <KeyRound size={18} className="text-[#2E7D32] dark:text-[#6FBF73]" aria-hidden="true" />
+              Temporary password for {resetResult?.name}
+            </DialogTitle>
+            <DialogDescription>
+              This is the only time the password is shown. Hand it over securely.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="rounded-2xl border border-[#FBC02D]/60 bg-[#FBC02D]/10 p-4">
+            <code className="block select-all break-all text-center font-mono text-lg font-bold tracking-wider text-[#124116] dark:text-[#FBC02D]">
+              {resetResult?.tempPassword}
+            </code>
+            <Button
+              variant="outline"
+              onClick={copyTempPassword}
+              className="mt-3 h-11 w-full rounded-full border-[#FBC02D] text-[#124116] hover:bg-[#FBC02D]/20 dark:text-[#6FBF73]"
+            >
+              <Copy size={15} className="mr-2" /> Copy password
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Give this to the trader in person. They must change it after signing in (Profile → Change
+            my password). All their previous sign-ins were ended.
+          </p>
+          <DialogFooter>
+            <Button
+              onClick={() => setResetResult(null)}
+              className="h-11 w-full rounded-full bg-[#1B5E20] font-semibold text-[#FFFDF5] hover:bg-[#124116] dark:bg-[#4CAF50] dark:text-[#071A0C] dark:hover:bg-[#FFFDF5]"
+            >
+              Done
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }

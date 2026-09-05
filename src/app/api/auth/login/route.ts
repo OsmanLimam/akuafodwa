@@ -15,13 +15,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Email and password are required.' }, { status: 400 })
     }
 
-    // Brute-force protection: per IP and per account.
+    // Brute-force protection: per client IP. Checked AFTER basic body parsing,
+    // BEFORE password verification. Persistent (DB-backed) so the limit holds
+    // across all serverless instances.
     const ip = clientIp(req)
-    const ipRl = rateLimit(`login:ip:${ip}`, 20, 15 * 60 * 1000)
-    const acctRl = rateLimit(`login:acct:${email}`, 6, 15 * 60 * 1000)
-    if (!ipRl.ok || !acctRl.ok) {
+    const ipRl = await rateLimit(`login-ip:${ip}`, 10, 5 * 60 * 1000)
+    if (!ipRl.ok) {
       return NextResponse.json(
-        { error: 'Too many sign-in attempts. Please wait about 15 minutes and try again.' },
+        { error: 'Too many attempts. Please wait a few minutes and try again.' },
         { status: 429 }
       )
     }

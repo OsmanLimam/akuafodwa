@@ -84,8 +84,12 @@ export function InboxView({ routeId, routeQuery }: { routeId?: string; routeQuer
 
   const activeThread = threads.find((t) => t.id === activeId) ?? null
 
-  const afterThreadUpdate = () => {
-    load()
+  // Surgical list update: merge the changed thread in place instead of a full
+  // refetch, so the list status badge stays in sync immediately after a mutation.
+  const afterThreadUpdate = (updated?: ApiThread) => {
+    if (updated) {
+      setThreads((prev) => prev.map((th) => (th.id === updated.id ? { ...th, ...updated } : th)))
+    }
     refreshUnreadCounts()
   }
 
@@ -222,7 +226,7 @@ function Conversation({
 }: {
   thread: ApiThread
   onBack: () => void
-  onChanged: () => void
+  onChanged: (updated?: ApiThread) => void
 }) {
   const { user, refreshUnreadCounts, t } = useApp()
   const [thread, setThread] = useState<ApiThread>(initialThread)
@@ -238,11 +242,11 @@ function Conversation({
       const data = await api<{ thread: ApiThread }>(`/api/threads/${thread.id}`)
       setThread(data.thread)
       setMessages(data.thread.messages)
-      onChanged()
+      onChanged(data.thread)
     } catch {
       /* ignore */
     }
-  }, [thread.id])
+  }, [thread.id, onChanged])
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
@@ -273,7 +277,19 @@ function Conversation({
   const act = async (action: string) => {
     setBusy(true)
     try {
-      await api(`/api/threads/${thread.id}/messages`, { method: 'POST', json: { action } })
+      const data = await api<{ thread?: ApiThread }>(`/api/threads/${thread.id}/messages`, {
+        method: 'POST',
+        json: { action },
+      })
+      // The action response already carries the updated thread (status,
+      // updatedAt). Apply it to local state and the list immediately so the
+      // status badge, contacts banner and action buttons update right away —
+      // the reload() below only enriches with the system message + contacts.
+      const updated = data.thread
+      if (updated) {
+        setThread((prev) => ({ ...prev, ...updated }))
+        onChanged(updated)
+      }
       if (action === 'ACCEPT') toast.success('Deal agreed! 🤝 Contacts are now shared below.')
       if (action === 'COMPLETE') toast.success('Deal marked as completed. Medaase!')
       await reload()

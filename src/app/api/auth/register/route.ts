@@ -8,7 +8,7 @@ const SELLER_TYPES = ['FARMER', 'TRADER', 'WHOLESALER', 'RETAILER', 'PROCESSOR',
 
 export async function POST(req: NextRequest) {
   const ip = clientIp(req)
-  const rl = rateLimit(`register:${ip}`, 5, 60 * 60 * 1000)
+  const rl = await rateLimit(`register-ip:${ip}`, 5, 60 * 60 * 1000)
   if (!rl.ok) {
     return NextResponse.json(
       { error: `Too many sign-up attempts. Please try again in about ${Math.ceil(rl.retryAfterSeconds / 60)} minutes.` },

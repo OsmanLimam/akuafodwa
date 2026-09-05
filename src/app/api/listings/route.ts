@@ -143,7 +143,7 @@ export async function POST(req: NextRequest) {
   if (!user) {
     return NextResponse.json({ error: 'Please sign in to sell on AkuafoDwa.' }, { status: 401 })
   }
-  const rl = rateLimit(`listing-create:${user.id}`, 10, 60 * 60 * 1000)
+  const rl = await rateLimit(`listing-create:${user.id}`, 10, 60 * 60 * 1000)
   if (!rl.ok) {
     return NextResponse.json(
       { error: 'You have posted several listings recently. Please try again later.' },

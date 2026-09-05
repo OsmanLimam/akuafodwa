@@ -19,6 +19,8 @@ export const SCHEMA_TABLES: string[] = [
   'OfferMessage',
   'Review',
   'Favorite',
+  'Report',
+  'RateLimit',
   'AuditLog',
   'PushSubscription',
   'StoredFile',
@@ -150,6 +152,26 @@ export const SCHEMA_STATEMENTS: string[] = [
     CONSTRAINT "Favorite_pkey" PRIMARY KEY ("userId","listingId")
 );`,
 
+  `CREATE TABLE IF NOT EXISTS "Report" (
+    "id" TEXT NOT NULL,
+    "listingId" TEXT NOT NULL,
+    "reporterId" TEXT NOT NULL,
+    "reason" TEXT NOT NULL,
+    "details" TEXT,
+    "status" TEXT NOT NULL DEFAULT 'OPEN',
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Report_pkey" PRIMARY KEY ("id")
+);`,
+
+  `CREATE TABLE IF NOT EXISTS "RateLimit" (
+    "key" TEXT NOT NULL,
+    "count" INTEGER NOT NULL DEFAULT 0,
+    "windowStart" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "RateLimit_pkey" PRIMARY KEY ("key")
+);`,
+
   `CREATE TABLE IF NOT EXISTS "AuditLog" (
     "id" TEXT NOT NULL,
     "actorId" TEXT,
@@ -189,13 +211,43 @@ export const SCHEMA_STATEMENTS: string[] = [
 
   `CREATE UNIQUE INDEX IF NOT EXISTS "User_email_key" ON "User"("email");`,
 
+  `CREATE INDEX IF NOT EXISTS "User_identityStatus_createdAt_idx" ON "User"("identityStatus", "createdAt");`,
+
   `CREATE UNIQUE INDEX IF NOT EXISTS "Session_token_key" ON "Session"("token");`,
+
+  `CREATE INDEX IF NOT EXISTS "Session_userId_expiresAt_idx" ON "Session"("userId", "expiresAt");`,
 
   `CREATE UNIQUE INDEX IF NOT EXISTS "Category_name_key" ON "Category"("name");`,
 
   `CREATE UNIQUE INDEX IF NOT EXISTS "Category_slug_key" ON "Category"("slug");`,
 
+  `CREATE INDEX IF NOT EXISTS "Listing_status_createdAt_idx" ON "Listing"("status", "createdAt");`,
+
+  `CREATE INDEX IF NOT EXISTS "Listing_status_isPremium_createdAt_idx" ON "Listing"("status", "isPremium", "createdAt");`,
+
+  `CREATE INDEX IF NOT EXISTS "Listing_sellerId_status_idx" ON "Listing"("sellerId", "status");`,
+
+  `CREATE INDEX IF NOT EXISTS "Listing_categoryId_status_idx" ON "Listing"("categoryId", "status");`,
+
+  `CREATE INDEX IF NOT EXISTS "Listing_region_status_idx" ON "Listing"("region", "status");`,
+
+  `CREATE INDEX IF NOT EXISTS "OfferThread_listingId_idx" ON "OfferThread"("listingId");`,
+
+  `CREATE INDEX IF NOT EXISTS "OfferThread_buyerId_updatedAt_idx" ON "OfferThread"("buyerId", "updatedAt");`,
+
+  `CREATE INDEX IF NOT EXISTS "OfferThread_sellerId_updatedAt_idx" ON "OfferThread"("sellerId", "updatedAt");`,
+
+  `CREATE INDEX IF NOT EXISTS "OfferMessage_threadId_createdAt_idx" ON "OfferMessage"("threadId", "createdAt");`,
+
   `CREATE UNIQUE INDEX IF NOT EXISTS "Review_threadId_key" ON "Review"("threadId");`,
+
+  `CREATE INDEX IF NOT EXISTS "Favorite_listingId_idx" ON "Favorite"("listingId");`,
+
+  `CREATE INDEX IF NOT EXISTS "Report_status_createdAt_idx" ON "Report"("status", "createdAt");`,
+
+  `CREATE UNIQUE INDEX IF NOT EXISTS "Report_listingId_reporterId_key" ON "Report"("listingId", "reporterId");`,
+
+  `CREATE INDEX IF NOT EXISTS "AuditLog_createdAt_idx" ON "AuditLog"("createdAt");`,
 
   `CREATE UNIQUE INDEX IF NOT EXISTS "PushSubscription_endpoint_key" ON "PushSubscription"("endpoint");`,
 
@@ -294,6 +346,20 @@ END $$;`,
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Favorite_listingId_fkey") THEN
         ALTER TABLE "Favorite" ADD CONSTRAINT "Favorite_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Report_listingId_fkey") THEN
+        ALTER TABLE "Report" ADD CONSTRAINT "Report_listingId_fkey" FOREIGN KEY ("listingId") REFERENCES "Listing"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+    END IF;
+END $$;`,
+
+  `DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_constraint WHERE conname = "Report_reporterId_fkey") THEN
+        ALTER TABLE "Report" ADD CONSTRAINT "Report_reporterId_fkey" FOREIGN KEY ("reporterId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
     END IF;
 END $$;`,
 
